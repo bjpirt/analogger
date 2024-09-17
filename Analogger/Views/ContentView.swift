@@ -13,16 +13,16 @@ struct ContentView: View {
         TabView {
             NavigationView {
                 VStack {
-                    Text("Shoots")
+                    Text("Film Rolls")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .background(Color.green)
                 }
-                .navigationTitle("Shoots")
+                .navigationTitle("Film Rolls")
             }
             .tabItem {
                 Image(systemName: "film.stack")
-                Text("Shoots")
+                Text("Film Rolls")
             }
             
             CameraListView()
@@ -37,15 +37,7 @@ struct ContentView: View {
                 Text("Lenses")
             }
             
-            NavigationView {
-                VStack {
-                    Text("Film Stock List")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .background(Color.green)
-                }
-                .navigationTitle("Film Stock")
-            }
+           FilmStockListView()
             .tabItem {
                 Image(systemName: "list.and.film")
                 Text("Film Stock")

@@ -12,12 +12,10 @@ import CoreData
 @objc(Lens)
 public class Lens: NSManagedObject {
     class func newLens() -> Lens {
-
         return Lens(context: CoreData.stack.context)
     }
 
     class func createLens(make: String, model: String, focalLength: Int16) -> Lens {
-
         let lens = Lens.newLens()
         lens.id = UUID()
         lens.make = make
@@ -29,7 +27,6 @@ public class Lens: NSManagedObject {
     }
 
     public func update(make: String, model: String, focalLength: Int16) {
-
         self.make = make
         self.model = model
         self.focalLength = focalLength
@@ -37,8 +34,6 @@ public class Lens: NSManagedObject {
     }
 
     public func delete() {
-
         CoreData.stack.context.delete(self)
     }
-
 }
