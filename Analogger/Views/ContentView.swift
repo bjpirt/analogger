@@ -31,15 +31,7 @@ struct ContentView: View {
                 Text("Cameras")
             }
 
-            NavigationView {
-                VStack {
-                    Text("Lens List")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .background(Color.gray)
-                }
-                .navigationTitle("Lenses")
-            }
+            LensListView()
             .tabItem {
                 Image(systemName: "camera.aperture")
                 Text("Lenses")

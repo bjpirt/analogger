@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-struct CameraListCell: View {
+struct ListCell: View {
     
-    var make: String
-    var model: String
+    var main: String
+    var sub: String
     
     var body: some View {
         HStack {
             VStack {
                 HStack {
-                    Text(make)
+                    Text(main)
                         .font(.headline)
                     Spacer()
                 }
                 HStack {
-                    Text(model)
+                    Text(sub)
                         .font(.subheadline)
                         .foregroundColor(.gray)
                     Spacer()
