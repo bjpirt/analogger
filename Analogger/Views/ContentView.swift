@@ -11,15 +11,7 @@ import CoreData
 struct ContentView: View {
     var body: some View {
         TabView {
-            NavigationView {
-                VStack {
-                    Text("Film Rolls")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .background(Color.green)
-                }
-                .navigationTitle("Film Rolls")
-            }
+            FilmRollListView()
             .tabItem {
                 Image(systemName: "film.stack")
                 Text("Film Rolls")

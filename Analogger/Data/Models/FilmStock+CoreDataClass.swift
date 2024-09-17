@@ -34,8 +34,6 @@ public class FilmStock: NSManagedObject {
     }
 
     public func delete() {
-
         CoreData.stack.context.delete(self)
     }
-
 }
