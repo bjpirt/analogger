@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FilmRollFormView: View {
 
-    @Binding var textName: String
+    @Binding var filmRoll: DraftFilmRoll
     
     var body: some View {
         
@@ -18,7 +18,7 @@ struct FilmRollFormView: View {
                 Text("Name: ").foregroundColor(.gray)
                 Spacer()
             }
-            TextField("Enter name of film roll", text: self.$textName)
+            TextField("Enter name of film roll", text: self.$filmRoll.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }
     }

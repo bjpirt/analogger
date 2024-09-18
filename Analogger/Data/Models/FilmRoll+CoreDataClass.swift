@@ -12,15 +12,17 @@ import CoreData
 @objc(FilmRoll)
 public class FilmRoll: NSManagedObject {
     class func newFilmRoll() -> FilmRoll {
-        return FilmRoll(context: CoreData.stack.context)
+        let filmRoll = FilmRoll(context: CoreData.stack.context)
+        filmRoll.id = UUID()
+        filmRoll.active = true
+        filmRoll.created = Date.now
+        return filmRoll
     }
 
     class func createFilmRoll(name: String) -> FilmRoll {
         let filmRoll = FilmRoll.newFilmRoll()
         filmRoll.name = name
-        filmRoll.id = UUID()
-        filmRoll.active = true
-        filmRoll.created = Date()
+        
         CoreData.stack.save()
 
         return filmRoll
@@ -33,5 +35,9 @@ public class FilmRoll: NSManagedObject {
 
     public func delete() {
         CoreData.stack.context.delete(self)
+    }
+    
+    public func save(){
+//        CoreData.stack.save()
     }
 }

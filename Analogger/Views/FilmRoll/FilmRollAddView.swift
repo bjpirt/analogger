@@ -11,12 +11,11 @@ struct FilmRollAddView : View {
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
-    @State private var textName: String = ""
+    @State private var filmRoll = DraftFilmRoll(name: "")
     
     var body: some View {
         Form {
-            
-            FilmRollFormView(textName: self.$textName)
+            FilmRollFormView(filmRoll: self.$filmRoll)
         }
         .navigationBarTitle(Text("Add Film Roll"), displayMode: .large)
         .navigationBarItems(
@@ -29,11 +28,11 @@ struct FilmRollAddView : View {
     }
     
     func saveAction() {
-        _ = FilmRoll.createFilmRoll(name: self.textName)
+        _ = FilmRoll.createFilmRoll(name: self.filmRoll.name)
         self.cancelAction()
     }
     
     func dirty() -> Bool {
-        return !self.textName.isEmpty
+        return !self.filmRoll.name.isEmpty
     }
 }

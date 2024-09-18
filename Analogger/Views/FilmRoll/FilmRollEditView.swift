@@ -13,7 +13,7 @@ struct FilmRollEditView : View {
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
 
-    @State private var textName: String = ""
+    @State private var draftFilmRoll: DraftFilmRoll = DraftFilmRoll(name: "")
     
     var body: some View {
         VStack {
@@ -28,11 +28,9 @@ struct FilmRollEditView : View {
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
                 }) {
-                    FilmRollFormView(textName: self.$textName)
+                    FilmRollFormView(filmRoll: self.$draftFilmRoll)
                 }
             }
-                
-            
         }
         .onAppear(perform: { self.onAppear() })
         .onDisappear(perform: {self.saveAction()})            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
@@ -41,7 +39,7 @@ struct FilmRollEditView : View {
     }
     
     func onAppear() {
-        self.textName = self.filmRoll.name
+        self.draftFilmRoll = DraftFilmRoll(name: self.filmRoll.name)
     }
     
     func cancelAction() {
@@ -49,7 +47,7 @@ struct FilmRollEditView : View {
     }
     
     func saveAction() {
-        self.filmRoll.update(name: self.textName)
+        self.filmRoll.update(name: self.draftFilmRoll.name)
         self.cancelAction()
     }
     
