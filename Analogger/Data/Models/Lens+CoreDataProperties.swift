@@ -17,7 +17,6 @@ extension Lens {
     }
 
     @NSManaged public var focalLength: Int16
-    @NSManaged public var id: UUID
     @NSManaged public var make: String
     @NSManaged public var model: String
 

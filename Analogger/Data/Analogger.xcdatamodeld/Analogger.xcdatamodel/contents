@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Camera" representedClassName="Camera" syncable="YES">
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="make" attributeType="String"/>
         <attribute name="model" attributeType="String"/>
         <relationship name="filmRolls" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="FilmRoll" inverseName="camera" inverseEntity="FilmRoll"/>
@@ -9,7 +8,6 @@
     <entity name="FilmRoll" representedClassName="FilmRoll" syncable="YES">
         <attribute name="active" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="filmRolls" inverseEntity="Camera"/>
         <relationship name="filmStock" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FilmStock" inverseName="filmRolls" inverseEntity="FilmStock"/>
@@ -17,20 +15,17 @@
     </entity>
     <entity name="FilmStock" representedClassName="FilmStock" syncable="YES">
         <attribute name="asa" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="make" attributeType="String"/>
         <attribute name="type" attributeType="String"/>
         <relationship name="filmRolls" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="FilmRoll" inverseName="filmStock" inverseEntity="FilmRoll"/>
     </entity>
     <entity name="Lens" representedClassName="Lens" syncable="YES">
         <attribute name="focalLength" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="make" attributeType="String"/>
         <attribute name="model" attributeType="String"/>
         <relationship name="filmRolls" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="FilmRoll" inverseName="lens" inverseEntity="FilmRoll"/>
     </entity>
     <entity name="Shot" representedClassName="Shot" syncable="YES" codeGenerationType="class">
-        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lat" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="lon" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>

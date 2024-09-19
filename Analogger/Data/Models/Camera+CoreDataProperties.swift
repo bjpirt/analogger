@@ -16,7 +16,6 @@ extension Camera {
         return NSFetchRequest<Camera>(entityName: "Camera")
     }
 
-    @NSManaged public var id: UUID
     @NSManaged public var make: String
     @NSManaged public var model: String
 

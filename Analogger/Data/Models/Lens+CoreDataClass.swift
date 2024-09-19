@@ -17,7 +17,6 @@ public class Lens: NSManagedObject {
 
     class func createLens(make: String, model: String, focalLength: Int16) -> Lens {
         let lens = Lens.newLens()
-        lens.id = UUID()
         lens.make = make
         lens.model = model
         lens.focalLength = focalLength

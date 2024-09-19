@@ -19,7 +19,6 @@ public class Camera: NSManagedObject {
         class func createCamera(make: String, model: String) -> Camera {
     
             let camera = Camera.newCamera()
-            camera.id = UUID()
             camera.make = make
             camera.model = model
             CoreData.stack.save()

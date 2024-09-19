@@ -17,7 +17,6 @@ public class FilmStock: NSManagedObject {
 
     class func createFilmStock(make: String, type: String, asa: Int16) -> FilmStock {
         let filmStock = FilmStock.newFilmStock()
-        filmStock.id = UUID()
         filmStock.make = make
         filmStock.type = type
         filmStock.asa = asa

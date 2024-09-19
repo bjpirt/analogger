@@ -17,7 +17,6 @@ extension FilmStock {
     }
 
     @NSManaged public var asa: Int16
-    @NSManaged public var id: UUID
     @NSManaged public var make: String
     @NSManaged public var type: String
 

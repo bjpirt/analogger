@@ -13,7 +13,6 @@ import CoreData
 public class FilmRoll: NSManagedObject {
     class func newFilmRoll() -> FilmRoll {
         let filmRoll = FilmRoll(context: CoreData.stack.context)
-        filmRoll.id = UUID()
         filmRoll.active = true
         filmRoll.created = Date.now
         return filmRoll
