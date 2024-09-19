@@ -53,6 +53,10 @@ public class FilmRoll: NSManagedObject {
         CoreData.stack.save()
     }
 
+    public func addFilmShot(){
+        let _ = FilmShot.createFilmShot(filmRoll: self, camera: self.camera!, lens: self.lens)
+    }
+
     public func delete() {
         CoreData.stack.context.delete(self)
     }

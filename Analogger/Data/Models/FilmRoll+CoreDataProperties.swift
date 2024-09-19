@@ -22,6 +22,24 @@ extension FilmRoll {
     @NSManaged public var camera: Camera?
     @NSManaged public var filmStock: FilmStock?
     @NSManaged public var lens: Lens?
+    @NSManaged public var filmShots: NSSet?
+
+}
+
+// MARK: Generated accessors for filmShots
+extension FilmRoll {
+
+    @objc(addFilmShotsObject:)
+    @NSManaged public func addToFilmShots(_ value: FilmShot)
+
+    @objc(removeFilmShotsObject:)
+    @NSManaged public func removeFromFilmShots(_ value: FilmShot)
+
+    @objc(addFilmShots:)
+    @NSManaged public func addToFilmShots(_ values: NSSet)
+
+    @objc(removeFilmShots:)
+    @NSManaged public func removeFromFilmShots(_ values: NSSet)
 
 }
 

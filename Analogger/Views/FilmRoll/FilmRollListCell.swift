@@ -56,8 +56,24 @@ struct FilmRollListCell: View {
                         Spacer()
                     }
                 }
+
+                HStack() {
+                    Image(systemName: "camera")
+                        .font(.system(size: 30))
+                                .onTapGesture {
+                                    self.addShotAction()
+                                }
+                    Spacer()
+
+                    Text("\((self.filmRoll.filmShots?.count ?? 0)!) shots")
+                        .foregroundColor(.black)
+                }
             }
         }
+    }
+
+    func addShotAction(){
+        self.filmRoll.addFilmShot()
     }
 }
 
