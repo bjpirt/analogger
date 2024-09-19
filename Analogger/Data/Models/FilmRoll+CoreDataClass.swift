@@ -28,8 +28,29 @@ public class FilmRoll: NSManagedObject {
         return filmRoll
     }
 
+    class func createFilmRollFromDraft(draftFilmRoll: DraftFilmRoll) -> FilmRoll {
+        let filmRoll = FilmRoll.newFilmRoll()
+        filmRoll.name = draftFilmRoll.name
+        filmRoll.camera = draftFilmRoll.camera
+        filmRoll.lens = draftFilmRoll.lens
+        filmRoll.filmStock = draftFilmRoll.filmStock
+
+        CoreData.stack.save()
+
+        return filmRoll
+    }
+
     public func update(name: String) {
         self.name = name
+        CoreData.stack.save()
+    }
+
+    public func updateFromDraft(draftFilmRoll: DraftFilmRoll){
+        self.name = draftFilmRoll.name
+        self.camera = draftFilmRoll.camera
+        self.lens = draftFilmRoll.lens
+        self.filmStock = draftFilmRoll.filmStock
+
         CoreData.stack.save()
     }
 
@@ -38,6 +59,6 @@ public class FilmRoll: NSManagedObject {
     }
     
     public func save(){
-//        CoreData.stack.save()
+        CoreData.stack.save()
     }
 }

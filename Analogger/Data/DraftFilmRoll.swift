@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct DraftFilmRoll {
+public struct DraftFilmRoll {
     var name: String
-    var camera: Camera?
     var filmStock: FilmStock?
+    var camera: Camera?
     var lens: Lens?
 }

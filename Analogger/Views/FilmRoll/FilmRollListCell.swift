@@ -32,7 +32,19 @@ struct FilmRollListCell: View {
                         .foregroundColor(.gray)
                     Spacer()
                 }
+                if self.filmRoll.camera != nil {
+                    HStack {
+                        Text("\((self.filmRoll.camera?.make)!) \((self.filmRoll.camera?.model)!)")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                        Spacer()
+                    }
+                }
             }
         }
     }
+}
+
+#Preview {
+    FilmRollListCell(filmRoll: FilmRoll.createFilmRoll(name: "New Film Roll"))
 }

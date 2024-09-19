@@ -28,7 +28,11 @@ struct FilmRollAddView : View {
     }
     
     func saveAction() {
-        _ = FilmRoll.createFilmRoll(name: self.filmRoll.name)
+        let newRoll = FilmRoll.createFilmRoll(name: self.filmRoll.name)
+        if self.filmRoll.camera != nil {
+            newRoll.camera = self.filmRoll.camera
+        }
+        newRoll.save()
         self.cancelAction()
     }
     

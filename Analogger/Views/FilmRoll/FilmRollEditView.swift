@@ -13,7 +13,17 @@ struct FilmRollEditView : View {
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
 
-    @State private var draftFilmRoll: DraftFilmRoll = DraftFilmRoll(name: "")
+    @State private var draftFilmRoll: DraftFilmRoll
+
+    init(filmRoll: FilmRoll){
+        self.filmRoll = filmRoll
+        self.draftFilmRoll = DraftFilmRoll(
+            name: filmRoll.name,
+            filmStock: filmRoll.filmStock,
+            camera: filmRoll.camera,
+            lens: filmRoll.lens
+        )
+    }
     
     var body: some View {
         VStack {
@@ -32,14 +42,9 @@ struct FilmRollEditView : View {
                 }
             }
         }
-        .onAppear(perform: { self.onAppear() })
         .onDisappear(perform: {self.saveAction()})            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
-        .navigationBarTitle(Text("Edit Film Roll Details"), displayMode: .automatic)
+        .navigationBarTitle(Text("Edit Film Roll"), displayMode: .automatic)
         .navigationBarItems(trailing: Button(action:{ self.cancelAction() }) { Text("Cancel") })
-    }
-    
-    func onAppear() {
-        self.draftFilmRoll = DraftFilmRoll(name: self.filmRoll.name)
     }
     
     func cancelAction() {
@@ -47,7 +52,7 @@ struct FilmRollEditView : View {
     }
     
     func saveAction() {
-        self.filmRoll.update(name: self.draftFilmRoll.name)
+        self.filmRoll.updateFromDraft(draftFilmRoll: self.draftFilmRoll)
         self.cancelAction()
     }
     

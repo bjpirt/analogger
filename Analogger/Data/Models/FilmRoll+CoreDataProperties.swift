@@ -20,9 +20,9 @@ extension FilmRoll {
     @NSManaged public var created: Date
     @NSManaged public var id: UUID
     @NSManaged public var name: String
-    @NSManaged public var camera: Camera
-    @NSManaged public var filmStock: FilmStock
-    @NSManaged public var lens: Lens
+    @NSManaged public var camera: Camera?
+    @NSManaged public var filmStock: FilmStock?
+    @NSManaged public var lens: Lens?
 
 }
 
