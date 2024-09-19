@@ -27,7 +27,7 @@ struct CameraListView : View {
                         ForEach(self.dataSource.objects) { camera in
                         
                                 NavigationLink(destination: CameraEditView(camera: camera))
-                            { ListCell(main: camera.make!, sub: camera.model!) }
+                            { ListCell(main: camera.make, sub: camera.model) }
                         }
                             .onDelete(perform: self.dataSource.delete)
                     }

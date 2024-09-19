@@ -47,8 +47,8 @@ struct CameraEditView : View {
     
     func onAppear() {
         
-        self.textMake = self.camera.make!
-        self.textModel = self.camera.model!
+        self.textMake = self.camera.make
+        self.textModel = self.camera.model
     }
     
     func cancelAction() {
