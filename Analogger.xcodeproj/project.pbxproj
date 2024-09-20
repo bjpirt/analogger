@@ -19,6 +19,7 @@
 		2F61C1DA2C9ABF7D00C6B63A /* DraftFilmRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1D92C9ABF7D00C6B63A /* DraftFilmRoll.swift */; };
 		2F61C1DD2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1DB2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift */; };
 		2F61C1DE2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1DC2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift */; };
+		2F61C1EC2C9D5C3C00C6B63A /* FilmRollShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1EB2C9D5C3C00C6B63A /* FilmRollShowView.swift */; };
 		2F9AB2802C997185009F08A0 /* HiddenNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB27F2C997184009F08A0 /* HiddenNavigationLink.swift */; };
 		2F9AB2822C99A108009F08A0 /* LensListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2812C99A108009F08A0 /* LensListView.swift */; };
 		2F9AB2842C99A1FA009F08A0 /* LensEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2832C99A1FA009F08A0 /* LensEditView.swift */; };
@@ -80,6 +81,7 @@
 		2F61C1D92C9ABF7D00C6B63A /* DraftFilmRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftFilmRoll.swift; sourceTree = "<group>"; };
 		2F61C1DB2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmShot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2F61C1DC2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmShot+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F61C1EB2C9D5C3C00C6B63A /* FilmRollShowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmRollShowView.swift; sourceTree = "<group>"; };
 		2F9AB27F2C997184009F08A0 /* HiddenNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenNavigationLink.swift; sourceTree = "<group>"; };
 		2F9AB2812C99A108009F08A0 /* LensListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensListView.swift; sourceTree = "<group>"; };
 		2F9AB2832C99A1FA009F08A0 /* LensEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensEditView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				2F61C1CD2C99E7AF00C6B63A /* FilmRollAddView.swift */,
 				2F61C1D32C99EA2700C6B63A /* FilmRollEditView.swift */,
+				2F61C1EB2C9D5C3C00C6B63A /* FilmRollShowView.swift */,
 				2F61C1CF2C99E82100C6B63A /* FilmRollFormView.swift */,
 				2F61C1D12C99E9CC00C6B63A /* FilmRollListCell.swift */,
 				2F61C1C72C99E71A00C6B63A /* FilmRollListView.swift */,
@@ -451,6 +454,7 @@
 				2FFCD4AC2C98534200C6C1C3 /* ActivateButton.swift in Sources */,
 				2FFCD4A52C98269300C6C1C3 /* CameraAddView.swift in Sources */,
 				2F61C1C82C99E71A00C6B63A /* FilmRollListView.swift in Sources */,
+				2F61C1EC2C9D5C3C00C6B63A /* FilmRollShowView.swift in Sources */,
 				2F61C1CB2C99E74500C6B63A /* FilmRoll+CoreDataClass.swift in Sources */,
 				2F61C1CC2C99E74500C6B63A /* FilmRoll+CoreDataProperties.swift in Sources */,
 				2F9AB28C2C99A39D009F08A0 /* LensAddView.swift in Sources */,

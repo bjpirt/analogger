@@ -28,18 +28,7 @@ struct FilmRollEditView : View {
     var body: some View {
         VStack {
             Form {
-                Section(footer: HStack {
-                    Spacer()
-                    Button(
-                        role: .destructive,
-                        action: { self.deleteAction() },
-                        label: { Text("Delete").frame(maxWidth: .infinity) }
-                    )
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
-                }) {
-                    FilmRollFormView(filmRoll: self.$draftFilmRoll)
-                }
+                FilmRollFormView(filmRoll: self.$draftFilmRoll)
             }
         }
         .onDisappear(perform: {self.saveAction()})            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
@@ -53,11 +42,6 @@ struct FilmRollEditView : View {
     
     func saveAction() {
         self.filmRoll.updateFromDraft(draftFilmRoll: self.draftFilmRoll)
-        self.cancelAction()
-    }
-    
-    func deleteAction() {
-        self.filmRoll.delete()
         self.cancelAction()
     }
 }
