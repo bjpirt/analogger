@@ -16,8 +16,8 @@ extension FilmShot {
         return NSFetchRequest<FilmShot>(entityName: "FilmShot")
     }
 
-    @NSManaged public var lat: NSDecimalNumber?
-    @NSManaged public var lon: NSDecimalNumber?
+    @NSManaged public var lat: Double
+    @NSManaged public var lon: Double
     @NSManaged public var timestamp: Date
     @NSManaged public var filmRoll: FilmRoll
     @NSManaged public var camera: Camera

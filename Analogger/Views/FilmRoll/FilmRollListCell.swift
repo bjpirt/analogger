@@ -10,7 +10,9 @@ import SwiftUI
 struct FilmRollListCell: View {
     
     var filmRoll: FilmRoll
-    
+
+    @EnvironmentObject var locationViewModel: LocationViewModel
+
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -73,7 +75,11 @@ struct FilmRollListCell: View {
     }
 
     func addShotAction(){
-        self.filmRoll.addFilmShot()
+        let location = locationViewModel.lastSeenLocation
+        self.filmRoll.addFilmShot(
+            lat: location?.coordinate.latitude as Double?,
+            lon: location?.coordinate.longitude as Double?
+        )
     }
 }
 

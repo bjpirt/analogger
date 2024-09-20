@@ -9,9 +9,13 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+
+    @StateObject var locationViewModel = LocationViewModel()
+
     var body: some View {
         TabView {
             FilmRollListView()
+            .environmentObject(locationViewModel)
             .tabItem {
                 Image(systemName: "film.stack")
                 Text("Film Rolls")
@@ -49,5 +53,10 @@ struct ContentView: View {
                 Text("Settings")
             }
         }
+        .onAppear(perform: { self.onAppear() })
+    }
+
+    func onAppear(){
+        locationViewModel.requestPermission()
     }
 }

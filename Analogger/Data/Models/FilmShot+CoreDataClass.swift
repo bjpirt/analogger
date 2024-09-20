@@ -15,15 +15,19 @@ public class FilmShot: NSManagedObject {
         return FilmShot(context: CoreData.stack.context)
     }
 
-    class func createFilmShot(filmRoll: FilmRoll, camera: Camera, lens: Lens?) -> FilmShot {
-        let filmStock = FilmShot.newFilmShot()
-        filmStock.timestamp = Date.now
-        filmStock.filmRoll = filmRoll
-        filmStock.camera = camera
-        filmStock.lens = lens
+    class func createFilmShot(filmRoll: FilmRoll, camera: Camera, lens: Lens?, lat: Double?, lon: Double?) -> FilmShot {
+        let filmShot = FilmShot.newFilmShot()
+        filmShot.timestamp = Date.now
+        filmShot.filmRoll = filmRoll
+        filmShot.camera = camera
+        filmShot.lens = lens
+        if lat != nil && lon != nil {
+            filmShot.lat = lat!
+            filmShot.lon = lon!
+        }
         CoreData.stack.save()
 
-        return filmStock
+        return filmShot
     }
 
     public func update() {

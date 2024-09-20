@@ -11,6 +11,7 @@ import CoreData
 
 @objc(FilmRoll)
 public class FilmRoll: NSManagedObject {
+
     class func newFilmRoll() -> FilmRoll {
         let filmRoll = FilmRoll(context: CoreData.stack.context)
         filmRoll.active = true
@@ -53,8 +54,8 @@ public class FilmRoll: NSManagedObject {
         CoreData.stack.save()
     }
 
-    public func addFilmShot(){
-        let _ = FilmShot.createFilmShot(filmRoll: self, camera: self.camera!, lens: self.lens)
+    public func addFilmShot(lat: Double?, lon: Double?){
+        let _ = FilmShot.createFilmShot(filmRoll: self, camera: self.camera!, lens: self.lens, lat: lat, lon: lon)
     }
 
     public func delete() {
