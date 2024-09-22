@@ -24,7 +24,7 @@ struct FilmRollListView : View {
                         
                         ForEach(self.dataSource.objects) { filmRoll in
                         
-                            NavigationLink(destination: FilmRollShowView(filmRoll: filmRoll))
+                            NavigationLink(destination: FilmRollView(filmRoll: filmRoll))
                             { FilmRollListCell(filmRoll: filmRoll) }
                         }
                             .onDelete(perform: self.dataSource.delete)
