@@ -4,7 +4,7 @@
         <attribute name="make" attributeType="String"/>
         <attribute name="model" attributeType="String"/>
         <relationship name="filmRolls" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="FilmRoll" inverseName="camera" inverseEntity="FilmRoll"/>
-        <relationship name="filmShots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FilmShot" inverseName="camera" inverseEntity="FilmShot"/>
+        <relationship name="filmShots" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="FilmShot" inverseName="camera" inverseEntity="FilmShot"/>
     </entity>
     <entity name="FilmRoll" representedClassName="FilmRoll" syncable="YES">
         <attribute name="active" attributeType="Boolean" usesScalarValueType="YES"/>

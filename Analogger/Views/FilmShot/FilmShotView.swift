@@ -1,15 +1,15 @@
 //
-//  FilmRollEditView.swift
+//  FilmShotView.swift
 //  Analogger
 //
-//  Created by Ben Pirt on 16/09/2024.
+//  Created by Ben Pirt on 23/09/2024.
 //
 
 import SwiftUI
 
-struct FilmRollView : View {
-    
-    @State var filmRoll: FilmRoll
+struct FilmShotView : View {
+
+    @State var filmShot: FilmShot
 
     @StateObject private var cameraDataSource = CoreDataSource<Camera>()
         .sortKeys(sortKey1: "make", sortKey2: "model")
@@ -17,7 +17,7 @@ struct FilmRollView : View {
         .sortKeys(sortKey1: "make", sortKey2: "model")
     @StateObject private var filmStockDataSource = CoreDataSource<FilmStock>()
         .sortKeys(sortKey1: "make", sortKey2: "type")
-    
+
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
 
     private let dateFormatter: DateFormatter = {
@@ -30,71 +30,54 @@ struct FilmRollView : View {
     var body: some View {
         VStack {
             List {
-                Section(header: Text("Film roll detail")){
-                    VStack(alignment: .leading) {
-                        Text("Name")
-                            .textCase(.uppercase)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                        TextField("Enter name of film roll", text: self.$filmRoll.name)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    VStack(alignment: .leading) {
-                        Toggle("Active", isOn: self.$filmRoll.active)
-                    }
+                Section(header: Text("Film shot detail")){
                     VStack(alignment: .leading) {
                         Text("Created")
                             .textCase(.uppercase)
                             .font(.subheadline)
                             .foregroundColor(.gray)
-                        Text(dateFormatter.string(from: self.filmRoll.created))
+                        Text(dateFormatter.string(from: self.filmShot.timestamp))
                     }
-                    Picker("Camera", selection: self.$filmRoll.camera) {
-                        Text("Select camera").tag(Optional<Camera>(nil))
-
+                    VStack(alignment: .leading) {
+                        Text("Latitude")
+                            .textCase(.uppercase)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                        Text("\(self.filmShot.lat)")
+                    }
+                    VStack(alignment: .leading) {
+                        Text("Longitude")
+                            .textCase(.uppercase)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                        Text("\(self.filmShot.lon)")
+                    }
+                    Picker("Camera", selection: self.$filmShot.camera) {
                         ForEach(self.cameraDataSource.objects) { camera in
-                            Text("\(camera.make) \(camera.model)").tag(Optional(camera))
+                            Text("\(camera.make) \(camera.model)").tag(camera)
                         }
                     }
-                    Picker("Lens", selection: self.$filmRoll.lens) {
+                    Picker("Lens", selection: self.$filmShot.lens) {
                         Text("Select lens").tag(Optional<Lens>(nil))
 
                         ForEach(self.lensDataSource.objects) { lens in
                             Text("\(lens.make) \(lens.model)").tag(Optional(lens))
                         }
                     }
-                    Picker("Film Stock", selection: self.$filmRoll.filmStock) {
-                        Text("Select film stock").tag(Optional<FilmStock>(nil))
-
-                        ForEach(self.filmStockDataSource.objects) { filmStock in
-                            Text("\(filmStock.make) \(filmStock.type)").tag(Optional(filmStock))
-                        }
-                    }
                 }
 
-                if self.filmRoll.filmShots != nil {
-                    Section(header: Text("Shots")){
-                        let shots = self.filmRoll.filmShots?.sortedArray(
-                            using: [NSSortDescriptor(key: "timestamp", ascending: true)]) as? [FilmShot] ?? []
-                        ForEach(0..<shots.count, id: \.self) { filmShotIndex in
-                            NavigationLink(destination: FilmShotView(filmShot: shots[filmShotIndex])) {
-                                Text("\(filmShotIndex + 1) - \(dateFormatter.string(from: shots[filmShotIndex].timestamp))")
-                            }
-                        }
-                    }
-                }
                 Section(){
                     Button(
                         role: .destructive,
                         action: { self.deleteAction() },
-                        label: { Text("Delete Film Roll").frame(maxWidth: .infinity) }
+                        label: { Text("Delete Film Shot").frame(maxWidth: .infinity) }
                     )
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
                 }
             }
         }
-        .navigationBarTitle(Text("Film roll details"), displayMode: .large)
+        .navigationBarTitle(Text("Film shot details"), displayMode: .large)
         .onDisappear(perform: {self.saveAction()})
     }
 
@@ -103,13 +86,12 @@ struct FilmRollView : View {
     }
 
     func saveAction() {
-        self.filmRoll.save()
+        self.filmShot.save()
         self.cancelAction()
     }
 
     func deleteAction() {
-        self.filmRoll.delete()
+        self.filmShot.delete()
         self.cancelAction()
     }
 }
-

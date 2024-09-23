@@ -30,7 +30,7 @@ public class FilmShot: NSManagedObject {
         return filmShot
     }
 
-    public func update() {
+    public func save() {
         CoreData.stack.save()
     }
 
