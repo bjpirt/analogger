@@ -58,17 +58,18 @@ struct FilmRollListCell: View {
                         Spacer()
                     }
                 }
+                if !self.filmRoll.complete {
+                    HStack() {
+                        Image(systemName: "camera")
+                            .font(.system(size: 30))
+                            .onTapGesture {
+                                self.addShotAction()
+                            }
+                        Spacer()
 
-                HStack() {
-                    Image(systemName: "camera")
-                        .font(.system(size: 30))
-                                .onTapGesture {
-                                    self.addShotAction()
-                                }
-                    Spacer()
-
-                    Text("\((self.filmRoll.filmShots?.count ?? 0)!) shots")
-                        .foregroundColor(.black)
+                        Text("\((self.filmRoll.filmShots?.count ?? 0)!) shots")
+                            .foregroundColor(.black)
+                    }
                 }
             }
         }

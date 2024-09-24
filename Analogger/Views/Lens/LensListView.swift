@@ -11,7 +11,7 @@ import CoreData
 struct LensListView : View {
 
     @StateObject private var dataSource = CoreDataSource<Lens>()
-        .sortKeys(sortKey1: "make", sortKey2: "model")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
 
     @State private var showingItemAddView: Bool = false
 

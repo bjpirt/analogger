@@ -11,7 +11,7 @@ import CoreData
 struct FilmStockListView : View {
 
     @StateObject private var dataSource = CoreDataSource<FilmStock>()
-        .sortKeys(sortKey1: "make", sortKey2: "type")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "type", ascending: true)])
 
     @State private var showingItemAddView: Bool = false
 

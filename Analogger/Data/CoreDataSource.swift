@@ -13,8 +13,7 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
     let objectWillChange = PassthroughSubject<Void, Never>()
     
     private var frc: NSFetchedResultsController<T>
-    private var sortKey1: String = "id"
-    private var sortKey2: String = "id"
+    private var _sortKeys: [(key: String, ascending: Bool)] = [("id", true)]
     
     init(entity: NSEntityDescription? = nil) {
 
@@ -33,10 +32,9 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
         return self
     }
     
-    public func sortKeys(sortKey1: String?, sortKey2: String?) -> CoreDataSource {
+    public func sortKeys(sortKeys: [(key: String, ascending: Bool)]) -> CoreDataSource {
         
-        self.sortKey1 = sortKey1 ?? "id"
-        self.sortKey2 = sortKey2 ?? "id"
+        self._sortKeys = sortKeys
         return self
     }
     
@@ -49,10 +47,9 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
             fetchRequest.entity = entity
         }
         
-        fetchRequest.sortDescriptors = [
-            NSSortDescriptor(key: self.sortKey1, ascending: true),
-            NSSortDescriptor(key: self.sortKey2, ascending: true)
-        ]
+        fetchRequest.sortDescriptors = self._sortKeys.map { sortKey in
+            NSSortDescriptor(key: sortKey.key, ascending: sortKey.ascending)
+        }
         
         return fetchRequest
     }

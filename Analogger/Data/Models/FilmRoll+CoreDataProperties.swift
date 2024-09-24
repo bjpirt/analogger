@@ -16,7 +16,7 @@ extension FilmRoll {
         return NSFetchRequest<FilmRoll>(entityName: "FilmRoll")
     }
 
-    @NSManaged public var active: Bool
+    @NSManaged public var complete: Bool
     @NSManaged public var created: Date
     @NSManaged public var name: String
     @NSManaged public var camera: Camera?

@@ -14,7 +14,7 @@ public class FilmRoll: NSManagedObject {
 
     class func newFilmRoll() -> FilmRoll {
         let filmRoll = FilmRoll(context: CoreData.stack.context)
-        filmRoll.active = true
+        filmRoll.complete = false
         filmRoll.created = Date.now
         return filmRoll
     }

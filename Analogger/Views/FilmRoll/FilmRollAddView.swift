@@ -17,13 +17,13 @@ struct FilmRollAddView : View {
     @State private var filmStock: FilmStock? = nil
 
     @StateObject private var cameraDataSource = CoreDataSource<Camera>()
-        .sortKeys(sortKey1: "make", sortKey2: "model")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
 
     @StateObject private var lensDataSource = CoreDataSource<Lens>()
-        .sortKeys(sortKey1: "make", sortKey2: "model")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
 
     @StateObject private var filmStockDataSource = CoreDataSource<FilmStock>()
-        .sortKeys(sortKey1: "make", sortKey2: "type")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "type", ascending: true)])
     
     var body: some View {
         Form {

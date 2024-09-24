@@ -12,11 +12,11 @@ struct FilmRollView : View {
     @State var filmRoll: FilmRoll
 
     @StateObject private var cameraDataSource = CoreDataSource<Camera>()
-        .sortKeys(sortKey1: "make", sortKey2: "model")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
     @StateObject private var lensDataSource = CoreDataSource<Lens>()
-        .sortKeys(sortKey1: "make", sortKey2: "model")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
     @StateObject private var filmStockDataSource = CoreDataSource<FilmStock>()
-        .sortKeys(sortKey1: "make", sortKey2: "type")
+        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "type", ascending: true)])
     
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
 
@@ -40,7 +40,7 @@ struct FilmRollView : View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     VStack(alignment: .leading) {
-                        Toggle("Active", isOn: self.$filmRoll.active)
+                        Toggle("Complete", isOn: self.$filmRoll.complete)
                     }
                     VStack(alignment: .leading) {
                         Text("Created")

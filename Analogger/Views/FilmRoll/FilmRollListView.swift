@@ -11,21 +11,34 @@ import CoreData
 struct FilmRollListView : View {
     
     @StateObject private var dataSource = CoreDataSource<FilmRoll>()
-        .sortKeys(sortKey1: "active", sortKey2: "created")
+        .sortKeys(sortKeys: [(key: "created", ascending: false)])
     
     @State private var showingItemAddView: Bool = false
     
+    @State private var shooting = false
+
     var body: some View {
         NavigationView {
             VStack {
                 List() {
-                    Section()
+                    Section("Active Rolls")
                     {
                         
                         ForEach(self.dataSource.objects) { filmRoll in
-                        
-                            NavigationLink(destination: FilmRollView(filmRoll: filmRoll))
-                            { FilmRollListCell(filmRoll: filmRoll) }
+                            if !filmRoll.complete {
+                                NavigationLink(destination: FilmRollView(filmRoll: filmRoll))
+                                { FilmRollListCell(filmRoll: filmRoll) }
+                            }
+                        }
+                            .onDelete(perform: self.dataSource.delete)
+                    }
+                    Section("Complete Rolls")
+                    {
+                        ForEach(self.dataSource.objects) { filmRoll in
+                            if filmRoll.complete {
+                                NavigationLink(destination: FilmRollView(filmRoll: filmRoll))
+                                { FilmRollListCell(filmRoll: filmRoll) }
+                            }
                         }
                             .onDelete(perform: self.dataSource.delete)
                     }
@@ -34,10 +47,12 @@ struct FilmRollListView : View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Film Rolls"), displayMode: .large)
-            .navigationBarItems(trailing:
+            .navigationBarItems(
+                trailing:
                 HStack {
-                ActivateButton(activates: $showingItemAddView) { Image(systemName: "plus") }
-                } )
+                    ActivateButton(activates: $showingItemAddView) { Image(systemName: "plus") }
+                }
+            )
          }
     }
 }

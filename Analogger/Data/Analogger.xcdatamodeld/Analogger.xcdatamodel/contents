@@ -7,7 +7,7 @@
         <relationship name="filmShots" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="FilmShot" inverseName="camera" inverseEntity="FilmShot"/>
     </entity>
     <entity name="FilmRoll" representedClassName="FilmRoll" syncable="YES">
-        <attribute name="active" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="complete" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="filmRolls" inverseEntity="Camera"/>
