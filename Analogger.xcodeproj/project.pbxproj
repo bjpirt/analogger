@@ -33,6 +33,15 @@
 		2F9AB2962C99AA4E009F08A0 /* FilmStockFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2952C99AA4E009F08A0 /* FilmStockFormView.swift */; };
 		2F9AB2982C99AAA2009F08A0 /* FilmStockAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2972C99AAA2009F08A0 /* FilmStockAddView.swift */; };
 		2FA341662C9967D400ED2C1C /* Analogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FA341642C9967D400ED2C1C /* Analogger.xcdatamodeld */; };
+		2FB345C82CA2B732005E5FD4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB345C72CA2B732005E5FD4 /* WidgetKit.framework */; };
+		2FB345CA2CA2B732005E5FD4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB345C92CA2B732005E5FD4 /* SwiftUI.framework */; };
+		2FB345CD2CA2B732005E5FD4 /* AnaloggerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB345CC2CA2B732005E5FD4 /* AnaloggerWidgetBundle.swift */; };
+		2FB345CF2CA2B732005E5FD4 /* AnaloggerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB345CE2CA2B732005E5FD4 /* AnaloggerWidgetLiveActivity.swift */; };
+		2FB345D12CA2B732005E5FD4 /* AnaloggerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB345D02CA2B732005E5FD4 /* AnaloggerWidget.swift */; };
+		2FB345D32CA2B732005E5FD4 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB345D22CA2B732005E5FD4 /* AppIntent.swift */; };
+		2FB345D52CA2B736005E5FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB345D42CA2B736005E5FD4 /* Assets.xcassets */; };
+		2FB345D92CA2B736005E5FD4 /* AnaloggerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2FB345C52CA2B732005E5FD4 /* AnaloggerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2FB345E02CA2B9FD005E5FD4 /* LiveActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB345DF2CA2B9FD005E5FD4 /* LiveActivityController.swift */; };
 		2FFCD4692C978BDB00C6C1C3 /* AnaloggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD4682C978BDB00C6C1C3 /* AnaloggerApp.swift */; };
 		2FFCD46B2C978BDB00C6C1C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD46A2C978BDB00C6C1C3 /* ContentView.swift */; };
 		2FFCD46D2C978BDE00C6C1C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFCD46C2C978BDE00C6C1C3 /* Assets.xcassets */; };
@@ -51,6 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2FB345D72CA2B736005E5FD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FFCD45D2C978BDB00C6C1C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FB345C42CA2B732005E5FD4;
+			remoteInfo = AnaloggerWidgetExtension;
+		};
 		2FFCD47B2C978BDF00C6C1C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2FFCD45D2C978BDB00C6C1C3 /* Project object */;
@@ -66,6 +82,20 @@
 			remoteInfo = Analogger;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2FB345DD2CA2B736005E5FD4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2FB345D92CA2B736005E5FD4 /* AnaloggerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F572EA32C9969080065D40E /* Camera+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camera+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -94,6 +124,16 @@
 		2F9AB2952C99AA4E009F08A0 /* FilmStockFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmStockFormView.swift; sourceTree = "<group>"; };
 		2F9AB2972C99AAA2009F08A0 /* FilmStockAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmStockAddView.swift; sourceTree = "<group>"; };
 		2FA341652C9967D400ED2C1C /* Analogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Analogger.xcdatamodel; sourceTree = "<group>"; };
+		2FB345C52CA2B732005E5FD4 /* AnaloggerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AnaloggerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB345C72CA2B732005E5FD4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2FB345C92CA2B732005E5FD4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2FB345CC2CA2B732005E5FD4 /* AnaloggerWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaloggerWidgetBundle.swift; sourceTree = "<group>"; };
+		2FB345CE2CA2B732005E5FD4 /* AnaloggerWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaloggerWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		2FB345D02CA2B732005E5FD4 /* AnaloggerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaloggerWidget.swift; sourceTree = "<group>"; };
+		2FB345D22CA2B732005E5FD4 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		2FB345D42CA2B736005E5FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FB345D62CA2B736005E5FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB345DF2CA2B9FD005E5FD4 /* LiveActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveActivityController.swift; sourceTree = "<group>"; };
 		2FFCD4652C978BDB00C6C1C3 /* Analogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Analogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FFCD4682C978BDB00C6C1C3 /* AnaloggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaloggerApp.swift; sourceTree = "<group>"; };
 		2FFCD46A2C978BDB00C6C1C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +155,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2FB345C22CA2B732005E5FD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB345CA2CA2B732005E5FD4 /* SwiftUI.framework in Frameworks */,
+				2FB345C82CA2B732005E5FD4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FFCD4622C978BDB00C6C1C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,12 +240,44 @@
 			path = FilmShot;
 			sourceTree = "<group>";
 		};
+		2FB345C62CA2B732005E5FD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FB345C72CA2B732005E5FD4 /* WidgetKit.framework */,
+				2FB345C92CA2B732005E5FD4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2FB345CB2CA2B732005E5FD4 /* AnaloggerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2FB345CC2CA2B732005E5FD4 /* AnaloggerWidgetBundle.swift */,
+				2FB345CE2CA2B732005E5FD4 /* AnaloggerWidgetLiveActivity.swift */,
+				2FB345D02CA2B732005E5FD4 /* AnaloggerWidget.swift */,
+				2FB345D22CA2B732005E5FD4 /* AppIntent.swift */,
+				2FB345D42CA2B736005E5FD4 /* Assets.xcassets */,
+				2FB345D62CA2B736005E5FD4 /* Info.plist */,
+			);
+			path = AnaloggerWidget;
+			sourceTree = "<group>";
+		};
+		2FB345DE2CA2B9E2005E5FD4 /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				2FB345DF2CA2B9FD005E5FD4 /* LiveActivityController.swift */,
+			);
+			path = LiveActivity;
+			sourceTree = "<group>";
+		};
 		2FFCD45C2C978BDB00C6C1C3 = {
 			isa = PBXGroup;
 			children = (
 				2FFCD4672C978BDB00C6C1C3 /* Analogger */,
 				2FFCD47D2C978BDF00C6C1C3 /* AnaloggerTests */,
 				2FFCD4872C978BDF00C6C1C3 /* AnaloggerUITests */,
+				2FB345CB2CA2B732005E5FD4 /* AnaloggerWidget */,
+				2FB345C62CA2B732005E5FD4 /* Frameworks */,
 				2FFCD4662C978BDB00C6C1C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,6 +288,7 @@
 				2FFCD4652C978BDB00C6C1C3 /* Analogger.app */,
 				2FFCD47A2C978BDF00C6C1C3 /* AnaloggerTests.xctest */,
 				2FFCD4842C978BDF00C6C1C3 /* AnaloggerUITests.xctest */,
+				2FB345C52CA2B732005E5FD4 /* AnaloggerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,6 +296,7 @@
 		2FFCD4672C978BDB00C6C1C3 /* Analogger */ = {
 			isa = PBXGroup;
 			children = (
+				2FB345DE2CA2B9E2005E5FD4 /* LiveActivity */,
 				2FFCD4AA2C98532C00C6C1C3 /* Components */,
 				2FFCD4A12C98264500C6C1C3 /* Data */,
 				2FFCD49A2C981AFE00C6C1C3 /* Views */,
@@ -304,6 +387,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2FB345C42CA2B732005E5FD4 /* AnaloggerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB345DA2CA2B736005E5FD4 /* Build configuration list for PBXNativeTarget "AnaloggerWidgetExtension" */;
+			buildPhases = (
+				2FB345C12CA2B732005E5FD4 /* Sources */,
+				2FB345C22CA2B732005E5FD4 /* Frameworks */,
+				2FB345C32CA2B732005E5FD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnaloggerWidgetExtension;
+			productName = AnaloggerWidgetExtension;
+			productReference = 2FB345C52CA2B732005E5FD4 /* AnaloggerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2FFCD4642C978BDB00C6C1C3 /* Analogger */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FFCD48E2C978BDF00C6C1C3 /* Build configuration list for PBXNativeTarget "Analogger" */;
@@ -311,10 +411,12 @@
 				2FFCD4612C978BDB00C6C1C3 /* Sources */,
 				2FFCD4622C978BDB00C6C1C3 /* Frameworks */,
 				2FFCD4632C978BDB00C6C1C3 /* Resources */,
+				2FB345DD2CA2B736005E5FD4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2FB345D82CA2B736005E5FD4 /* PBXTargetDependency */,
 			);
 			name = Analogger;
 			productName = Analogger;
@@ -367,6 +469,9 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					2FB345C42CA2B732005E5FD4 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					2FFCD4642C978BDB00C6C1C3 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -396,11 +501,20 @@
 				2FFCD4642C978BDB00C6C1C3 /* Analogger */,
 				2FFCD4792C978BDF00C6C1C3 /* AnaloggerTests */,
 				2FFCD4832C978BDF00C6C1C3 /* AnaloggerUITests */,
+				2FB345C42CA2B732005E5FD4 /* AnaloggerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2FB345C32CA2B732005E5FD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB345D52CA2B736005E5FD4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FFCD4632C978BDB00C6C1C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +541,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2FB345C12CA2B732005E5FD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB345D12CA2B732005E5FD4 /* AnaloggerWidget.swift in Sources */,
+				2FB345D32CA2B732005E5FD4 /* AppIntent.swift in Sources */,
+				2FB345CD2CA2B732005E5FD4 /* AnaloggerWidgetBundle.swift in Sources */,
+				2FB345CF2CA2B732005E5FD4 /* AnaloggerWidgetLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FFCD4612C978BDB00C6C1C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,6 +591,7 @@
 				2F9AB2962C99AA4E009F08A0 /* FilmStockFormView.swift in Sources */,
 				2FFCD4692C978BDB00C6C1C3 /* AnaloggerApp.swift in Sources */,
 				2F903A1E2CA15626000FE747 /* FilmShotView.swift in Sources */,
+				2FB345E02CA2B9FD005E5FD4 /* LiveActivityController.swift in Sources */,
 				2F61C1CE2C99E7AF00C6B63A /* FilmRollAddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +616,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2FB345D82CA2B736005E5FD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FB345C42CA2B732005E5FD4 /* AnaloggerWidgetExtension */;
+			targetProxy = 2FB345D72CA2B736005E5FD4 /* PBXContainerItemProxy */;
+		};
 		2FFCD47C2C978BDF00C6C1C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2FFCD4642C978BDB00C6C1C3 /* Analogger */;
@@ -503,6 +634,58 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2FB345DB2CA2B736005E5FD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnaloggerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnaloggerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pirt.analogger.Analogger.AnaloggerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FB345DC2CA2B736005E5FD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnaloggerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnaloggerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pirt.analogger.Analogger.AnaloggerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2FFCD48C2C978BDF00C6C1C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -625,6 +808,7 @@
 		2FFCD48F2C978BDF00C6C1C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -634,12 +818,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Used to store the location of the photo";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to store the location of the photo";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,6 +841,7 @@
 		2FFCD4902C978BDF00C6C1C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -665,12 +851,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Used to store the location of the photo";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to store the location of the photo";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -759,6 +946,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2FB345DA2CA2B736005E5FD4 /* Build configuration list for PBXNativeTarget "AnaloggerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB345DB2CA2B736005E5FD4 /* Debug */,
+				2FB345DC2CA2B736005E5FD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2FFCD4602C978BDB00C6C1C3 /* Build configuration list for PBXProject "Analogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -11,11 +11,14 @@ import CoreData
 struct ContentView: View {
 
     @StateObject var locationViewModel = LocationViewModel()
+    
+    @StateObject var liveActivityController = LiveActivityController()
 
     var body: some View {
         TabView {
             FilmRollListView()
-            .environmentObject(locationViewModel)
+                .environmentObject(locationViewModel)
+                .environmentObject(liveActivityController)
             .tabItem {
                 Image(systemName: "film.stack")
                 Text("Film Rolls")

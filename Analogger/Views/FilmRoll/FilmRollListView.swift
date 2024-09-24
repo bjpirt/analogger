@@ -16,6 +16,8 @@ struct FilmRollListView : View {
     @State private var showingItemAddView: Bool = false
     
     @State private var shooting = false
+    
+    @EnvironmentObject var liveActivityController: LiveActivityController
 
     var body: some View {
         NavigationView {
@@ -23,7 +25,6 @@ struct FilmRollListView : View {
                 List() {
                     Section("Active Rolls")
                     {
-                        
                         ForEach(self.dataSource.objects) { filmRoll in
                             if !filmRoll.complete {
                                 NavigationLink(destination: FilmRollView(filmRoll: filmRoll))
@@ -31,6 +32,7 @@ struct FilmRollListView : View {
                             }
                         }
                             .onDelete(perform: self.dataSource.delete)
+                        Toggle("Enable live activity", isOn: self.$shooting).onChange(of: self.shooting){ self.toggleLiveActivity() }
                     }
                     Section("Complete Rolls")
                     {
@@ -54,5 +56,15 @@ struct FilmRollListView : View {
                 }
             )
          }
+    }
+    
+    func toggleLiveActivity () {
+        if self.shooting {
+            self.liveActivityController.start()
+            print("Toggling live activity on")
+        }else{
+            self.liveActivityController.endActivity()
+            print("Toggling live activity off")
+        }
     }
 }
