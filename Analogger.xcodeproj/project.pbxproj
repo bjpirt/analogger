@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,7 +32,30 @@
 		2F9AB2942C99A9B3009F08A0 /* FilmStockEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2932C99A9B3009F08A0 /* FilmStockEditView.swift */; };
 		2F9AB2962C99AA4E009F08A0 /* FilmStockFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2952C99AA4E009F08A0 /* FilmStockFormView.swift */; };
 		2F9AB2982C99AAA2009F08A0 /* FilmStockAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2972C99AAA2009F08A0 /* FilmStockAddView.swift */; };
-		2FA341662C9967D400ED2C1C /* Analogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FA341642C9967D400ED2C1C /* Analogger.xcdatamodeld */; };
+		2FED29302CA2F67F0092FF55 /* Analogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */; };
+		2FED29392CA31A080092FF55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED29382CA31A070092FF55 /* WidgetKit.framework */; };
+		2FED293B2CA31A080092FF55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED293A2CA31A080092FF55 /* SwiftUI.framework */; };
+		2FED294C2CA31A0A0092FF55 /* AnaloggerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2FED29362CA31A070092FF55 /* AnaloggerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2FED29542CA31C300092FF55 /* LogShotIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED29532CA31C300092FF55 /* LogShotIntent.swift */; };
+		2FED29572CA31D660092FF55 /* AnaloggerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED29562CA31D660092FF55 /* AnaloggerActions.swift */; };
+		2FED295D2CA3F6F70092FF55 /* LogShotIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED29532CA31C300092FF55 /* LogShotIntent.swift */; };
+		2FED295E2CA3F7190092FF55 /* AnaloggerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED29562CA31D660092FF55 /* AnaloggerActions.swift */; };
+		2FED295F2CA3F7340092FF55 /* FilmRoll+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1C92C99E74500C6B63A /* FilmRoll+CoreDataClass.swift */; };
+		2FED29602CA3F7340092FF55 /* FilmRoll+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1CA2C99E74500C6B63A /* FilmRoll+CoreDataProperties.swift */; };
+		2FED29612CA3F7340092FF55 /* FilmShot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1DB2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift */; };
+		2FED29622CA3F7340092FF55 /* FilmShot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1DC2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift */; };
+		2FED29632CA3F7340092FF55 /* FilmStock+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB28F2C99A924009F08A0 /* FilmStock+CoreDataClass.swift */; };
+		2FED29642CA3F7340092FF55 /* FilmStock+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2902C99A924009F08A0 /* FilmStock+CoreDataProperties.swift */; };
+		2FED29652CA3F7340092FF55 /* Lens+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2852C99A247009F08A0 /* Lens+CoreDataClass.swift */; };
+		2FED29662CA3F7340092FF55 /* Lens+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2862C99A247009F08A0 /* Lens+CoreDataProperties.swift */; };
+		2FED29672CA3F7340092FF55 /* Camera+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F572EA32C9969080065D40E /* Camera+CoreDataClass.swift */; };
+		2FED29682CA3F7340092FF55 /* Camera+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F572EA42C9969080065D40E /* Camera+CoreDataProperties.swift */; };
+		2FED29692CA3F7340092FF55 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1ED2C9DCBC900C6B63A /* LocationViewModel.swift */; };
+		2FED296A2CA3F7340092FF55 /* CoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD4A22C98265800C6C1C3 /* CoreDataSource.swift */; };
+		2FED296B2CA3F7340092FF55 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD4A82C982E0F00C6C1C3 /* CoreData.swift */; };
+		2FED296E2CA4131A0092FF55 /* Analogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */; };
+		2FED29702CA41BD90092FF55 /* ShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED296F2CA41BD90092FF55 /* ShortcutsProvider.swift */; };
+		2FED29712CA41BD90092FF55 /* ShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED296F2CA41BD90092FF55 /* ShortcutsProvider.swift */; };
 		2FFCD4692C978BDB00C6C1C3 /* AnaloggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD4682C978BDB00C6C1C3 /* AnaloggerApp.swift */; };
 		2FFCD46B2C978BDB00C6C1C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD46A2C978BDB00C6C1C3 /* ContentView.swift */; };
 		2FFCD46D2C978BDE00C6C1C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFCD46C2C978BDE00C6C1C3 /* Assets.xcassets */; };
@@ -51,6 +74,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2FED294A2CA31A0A0092FF55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FFCD45D2C978BDB00C6C1C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FED29352CA31A070092FF55;
+			remoteInfo = AnaloggerWidgetExtension;
+		};
 		2FFCD47B2C978BDF00C6C1C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2FFCD45D2C978BDB00C6C1C3 /* Project object */;
@@ -66,6 +96,20 @@
 			remoteInfo = Analogger;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2FED29512CA31A0A0092FF55 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2FED294C2CA31A0A0092FF55 /* AnaloggerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F572EA32C9969080065D40E /* Camera+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Camera+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -93,7 +137,17 @@
 		2F9AB2932C99A9B3009F08A0 /* FilmStockEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmStockEditView.swift; sourceTree = "<group>"; };
 		2F9AB2952C99AA4E009F08A0 /* FilmStockFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmStockFormView.swift; sourceTree = "<group>"; };
 		2F9AB2972C99AAA2009F08A0 /* FilmStockAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmStockAddView.swift; sourceTree = "<group>"; };
-		2FA341652C9967D400ED2C1C /* Analogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Analogger.xcdatamodel; sourceTree = "<group>"; };
+		2FED292F2CA2F67F0092FF55 /* Analogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Analogger.xcdatamodel; sourceTree = "<group>"; };
+		2FED29362CA31A070092FF55 /* AnaloggerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AnaloggerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FED29382CA31A070092FF55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2FED293A2CA31A080092FF55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2FED29532CA31C300092FF55 /* LogShotIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogShotIntent.swift; sourceTree = "<group>"; };
+		2FED29562CA31D660092FF55 /* AnaloggerActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaloggerActions.swift; sourceTree = "<group>"; };
+		2FED29582CA32C110092FF55 /* LogShotIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogShotIntent.swift; sourceTree = "<group>"; };
+		2FED295B2CA3F5830092FF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2FED296C2CA3FA4B0092FF55 /* AnaloggerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnaloggerWidgetExtension.entitlements; sourceTree = "<group>"; };
+		2FED296D2CA3FA830092FF55 /* Analogger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Analogger.entitlements; sourceTree = "<group>"; };
+		2FED296F2CA41BD90092FF55 /* ShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsProvider.swift; sourceTree = "<group>"; };
 		2FFCD4652C978BDB00C6C1C3 /* Analogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Analogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FFCD4682C978BDB00C6C1C3 /* AnaloggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaloggerApp.swift; sourceTree = "<group>"; };
 		2FFCD46A2C978BDB00C6C1C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,7 +168,30 @@
 		2FFCD4AB2C98534200C6C1C3 /* ActivateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2FED294D2CA31A0A0092FF55 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2FED29352CA31A070092FF55 /* AnaloggerWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2FED293C2CA31A080092FF55 /* AnaloggerWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2FED294D2CA31A0A0092FF55 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = AnaloggerWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		2FED29332CA31A070092FF55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FED293B2CA31A080092FF55 /* SwiftUI.framework in Frameworks */,
+				2FED29392CA31A080092FF55 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FFCD4622C978BDB00C6C1C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,12 +268,53 @@
 			path = FilmShot;
 			sourceTree = "<group>";
 		};
+		2FED29372CA31A070092FF55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FED29592CA32C110092FF55 /* Intents */,
+				2FED29382CA31A070092FF55 /* WidgetKit.framework */,
+				2FED293A2CA31A080092FF55 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2FED29522CA31ADB0092FF55 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				2FED296F2CA41BD90092FF55 /* ShortcutsProvider.swift */,
+				2FED29532CA31C300092FF55 /* LogShotIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		2FED29592CA32C110092FF55 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				2FED29582CA32C110092FF55 /* LogShotIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		2FED295C2CA3F5FA0092FF55 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2FED29562CA31D660092FF55 /* AnaloggerActions.swift */,
+				2FFCD4A12C98264500C6C1C3 /* DataModel */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		2FFCD45C2C978BDB00C6C1C3 = {
 			isa = PBXGroup;
 			children = (
+				2FED296C2CA3FA4B0092FF55 /* AnaloggerWidgetExtension.entitlements */,
+				2FED295C2CA3F5FA0092FF55 /* Shared */,
+				2FED29522CA31ADB0092FF55 /* Intents */,
 				2FFCD4672C978BDB00C6C1C3 /* Analogger */,
 				2FFCD47D2C978BDF00C6C1C3 /* AnaloggerTests */,
 				2FFCD4872C978BDF00C6C1C3 /* AnaloggerUITests */,
+				2FED293C2CA31A080092FF55 /* AnaloggerWidget */,
+				2FED29372CA31A070092FF55 /* Frameworks */,
 				2FFCD4662C978BDB00C6C1C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,6 +325,7 @@
 				2FFCD4652C978BDB00C6C1C3 /* Analogger.app */,
 				2FFCD47A2C978BDF00C6C1C3 /* AnaloggerTests.xctest */,
 				2FFCD4842C978BDF00C6C1C3 /* AnaloggerUITests.xctest */,
+				2FED29362CA31A070092FF55 /* AnaloggerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,8 +333,9 @@
 		2FFCD4672C978BDB00C6C1C3 /* Analogger */ = {
 			isa = PBXGroup;
 			children = (
+				2FED296D2CA3FA830092FF55 /* Analogger.entitlements */,
+				2FED295B2CA3F5830092FF55 /* Info.plist */,
 				2FFCD4AA2C98532C00C6C1C3 /* Components */,
-				2FFCD4A12C98264500C6C1C3 /* Data */,
 				2FFCD49A2C981AFE00C6C1C3 /* Views */,
 				2FFCD4682C978BDB00C6C1C3 /* AnaloggerApp.swift */,
 				2FFCD46C2C978BDE00C6C1C3 /* Assets.xcassets */,
@@ -263,15 +383,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		2FFCD4A12C98264500C6C1C3 /* Data */ = {
+		2FFCD4A12C98264500C6C1C3 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */,
 				2FFCD4AD2C98558500C6C1C3 /* Models */,
 				2FFCD4A22C98265800C6C1C3 /* CoreDataSource.swift */,
 				2FFCD4A82C982E0F00C6C1C3 /* CoreData.swift */,
-				2FA341642C9967D400ED2C1C /* Analogger.xcdatamodeld */,
 			);
-			path = Data;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		2FFCD4AA2C98532C00C6C1C3 /* Components */ = {
@@ -304,6 +424,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2FED29352CA31A070092FF55 /* AnaloggerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FED294E2CA31A0A0092FF55 /* Build configuration list for PBXNativeTarget "AnaloggerWidgetExtension" */;
+			buildPhases = (
+				2FED29322CA31A070092FF55 /* Sources */,
+				2FED29332CA31A070092FF55 /* Frameworks */,
+				2FED29342CA31A070092FF55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2FED293C2CA31A080092FF55 /* AnaloggerWidget */,
+			);
+			name = AnaloggerWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = AnaloggerWidgetExtension;
+			productReference = 2FED29362CA31A070092FF55 /* AnaloggerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2FFCD4642C978BDB00C6C1C3 /* Analogger */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FFCD48E2C978BDF00C6C1C3 /* Build configuration list for PBXNativeTarget "Analogger" */;
@@ -311,10 +453,12 @@
 				2FFCD4612C978BDB00C6C1C3 /* Sources */,
 				2FFCD4622C978BDB00C6C1C3 /* Frameworks */,
 				2FFCD4632C978BDB00C6C1C3 /* Resources */,
+				2FED29512CA31A0A0092FF55 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2FED294B2CA31A0A0092FF55 /* PBXTargetDependency */,
 			);
 			name = Analogger;
 			productName = Analogger;
@@ -364,9 +508,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					2FED29352CA31A070092FF55 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					2FFCD4642C978BDB00C6C1C3 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -396,11 +543,19 @@
 				2FFCD4642C978BDB00C6C1C3 /* Analogger */,
 				2FFCD4792C978BDF00C6C1C3 /* AnaloggerTests */,
 				2FFCD4832C978BDF00C6C1C3 /* AnaloggerUITests */,
+				2FED29352CA31A070092FF55 /* AnaloggerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2FED29342CA31A070092FF55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FFCD4632C978BDB00C6C1C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,12 +582,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2FED29322CA31A070092FF55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FED295F2CA3F7340092FF55 /* FilmRoll+CoreDataClass.swift in Sources */,
+				2FED29602CA3F7340092FF55 /* FilmRoll+CoreDataProperties.swift in Sources */,
+				2FED29612CA3F7340092FF55 /* FilmShot+CoreDataClass.swift in Sources */,
+				2FED29622CA3F7340092FF55 /* FilmShot+CoreDataProperties.swift in Sources */,
+				2FED29702CA41BD90092FF55 /* ShortcutsProvider.swift in Sources */,
+				2FED29632CA3F7340092FF55 /* FilmStock+CoreDataClass.swift in Sources */,
+				2FED29642CA3F7340092FF55 /* FilmStock+CoreDataProperties.swift in Sources */,
+				2FED296E2CA4131A0092FF55 /* Analogger.xcdatamodeld in Sources */,
+				2FED29652CA3F7340092FF55 /* Lens+CoreDataClass.swift in Sources */,
+				2FED29662CA3F7340092FF55 /* Lens+CoreDataProperties.swift in Sources */,
+				2FED29672CA3F7340092FF55 /* Camera+CoreDataClass.swift in Sources */,
+				2FED29682CA3F7340092FF55 /* Camera+CoreDataProperties.swift in Sources */,
+				2FED29692CA3F7340092FF55 /* LocationViewModel.swift in Sources */,
+				2FED296A2CA3F7340092FF55 /* CoreDataSource.swift in Sources */,
+				2FED296B2CA3F7340092FF55 /* CoreData.swift in Sources */,
+				2FED295E2CA3F7190092FF55 /* AnaloggerActions.swift in Sources */,
+				2FED295D2CA3F6F70092FF55 /* LogShotIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FFCD4612C978BDB00C6C1C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2F9AB28E2C99A8FD009F08A0 /* FilmStockListView.swift in Sources */,
 				2F9AB2842C99A1FA009F08A0 /* LensEditView.swift in Sources */,
+				2FED29542CA31C300092FF55 /* LogShotIntent.swift in Sources */,
 				2FFCD49C2C981BCB00C6C1C3 /* CameraListView.swift in Sources */,
 				2F61C1EE2C9DCBC900C6B63A /* LocationViewModel.swift in Sources */,
 				2F9AB2982C99AAA2009F08A0 /* FilmStockAddView.swift in Sources */,
@@ -447,9 +627,10 @@
 				2F9AB2822C99A108009F08A0 /* LensListView.swift in Sources */,
 				2F61C1D22C99E9CC00C6B63A /* FilmRollListCell.swift in Sources */,
 				2FFCD4A32C98265800C6C1C3 /* CoreDataSource.swift in Sources */,
-				2FA341662C9967D400ED2C1C /* Analogger.xcdatamodeld in Sources */,
 				2FFCD4A92C982E0F00C6C1C3 /* CoreData.swift in Sources */,
 				2F9AB2942C99A9B3009F08A0 /* FilmStockEditView.swift in Sources */,
+				2FED29712CA41BD90092FF55 /* ShortcutsProvider.swift in Sources */,
+				2FED29302CA2F67F0092FF55 /* Analogger.xcdatamodeld in Sources */,
 				2F61C1DD2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift in Sources */,
 				2F61C1DE2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift in Sources */,
 				2FFCD4A02C981CEB00C6C1C3 /* ListCell.swift in Sources */,
@@ -458,6 +639,7 @@
 				2FFCD49E2C981BF800C6C1C3 /* CameraEditView.swift in Sources */,
 				2FFCD4AC2C98534200C6C1C3 /* ActivateButton.swift in Sources */,
 				2FFCD4A52C98269300C6C1C3 /* CameraAddView.swift in Sources */,
+				2FED29572CA31D660092FF55 /* AnaloggerActions.swift in Sources */,
 				2F61C1C82C99E71A00C6B63A /* FilmRollListView.swift in Sources */,
 				2F61C1CB2C99E74500C6B63A /* FilmRoll+CoreDataClass.swift in Sources */,
 				2F61C1CC2C99E74500C6B63A /* FilmRoll+CoreDataProperties.swift in Sources */,
@@ -490,6 +672,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2FED294B2CA31A0A0092FF55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FED29352CA31A070092FF55 /* AnaloggerWidgetExtension */;
+			targetProxy = 2FED294A2CA31A0A0092FF55 /* PBXContainerItemProxy */;
+		};
 		2FFCD47C2C978BDF00C6C1C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2FFCD4642C978BDB00C6C1C3 /* Analogger */;
@@ -503,6 +690,64 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2FED294F2CA31A0A0092FF55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AnaloggerWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R53V265ZRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnaloggerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnaloggerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pirt.analogger.Analogger.AnaloggerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FED29502CA31A0A0092FF55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AnaloggerWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R53V265ZRP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnaloggerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AnaloggerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pirt.analogger.Analogger.AnaloggerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2FFCD48C2C978BDF00C6C1C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -627,11 +872,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Analogger/Analogger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Analogger/Preview Content\"";
+				DEVELOPMENT_TEAM = R53V265ZRP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Analogger/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Used to store the location of the photo";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to store the location of the photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -639,7 +887,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,11 +906,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Analogger/Analogger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Analogger/Preview Content\"";
+				DEVELOPMENT_TEAM = R53V265ZRP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Analogger/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Used to store the location of the photo";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Used to store the location of the photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -670,7 +921,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -759,6 +1010,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2FED294E2CA31A0A0092FF55 /* Build configuration list for PBXNativeTarget "AnaloggerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FED294F2CA31A0A0092FF55 /* Debug */,
+				2FED29502CA31A0A0092FF55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2FFCD4602C978BDB00C6C1C3 /* Build configuration list for PBXProject "Analogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -798,14 +1058,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2FA341642C9967D400ED2C1C /* Analogger.xcdatamodeld */ = {
+		2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2FA341652C9967D400ED2C1C /* Analogger.xcdatamodel */,
+				2FED292F2CA2F67F0092FF55 /* Analogger.xcdatamodel */,
 			);
-			currentVersion = 2FA341652C9967D400ED2C1C /* Analogger.xcdatamodel */;
-			name = Analogger.xcdatamodeld;
-			path = /Users/bjpirt/Documents/personal/projects/analogger/Analogger/Analogger/Data/Analogger.xcdatamodeld;
+			currentVersion = 2FED292F2CA2F67F0092FF55 /* Analogger.xcdatamodel */;
+			path = Analogger.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

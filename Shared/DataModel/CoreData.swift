@@ -14,6 +14,9 @@ class CoreData: NSObject {
     private lazy var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "Analogger")
+        container.persistentStoreDescriptions = [
+            NSPersistentStoreDescription(url: FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.pirt.analogger.Analogger")!.appendingPathComponent("Analogger.sqlite"))
+        ]
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let nserror = error as NSError? {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")

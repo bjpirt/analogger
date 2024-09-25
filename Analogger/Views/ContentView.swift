@@ -57,6 +57,7 @@ struct ContentView: View {
     }
 
     func onAppear(){
+        
         locationViewModel.requestPermission()
     }
 }

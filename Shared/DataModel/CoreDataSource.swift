@@ -14,6 +14,7 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
     
     private var frc: NSFetchedResultsController<T>
     private var _sortKeys: [(key: String, ascending: Bool)] = [("id", true)]
+    private var _predicates: [NSPredicate] = []
     
     init(entity: NSEntityDescription? = nil) {
 
@@ -35,6 +36,12 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
     public func sortKeys(sortKeys: [(key: String, ascending: Bool)]) -> CoreDataSource {
         
         self._sortKeys = sortKeys
+        return self
+    }
+    
+    public func predicates(predicates: [NSPredicate]) -> CoreDataSource {
+        
+        self._predicates = predicates
         return self
     }
     

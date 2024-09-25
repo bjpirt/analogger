@@ -54,5 +54,13 @@ struct FilmRollListView : View {
                 }
             )
          }
+        .onAppear(perform: { self.onAppear() })
     }
+    
+
+    func onAppear(){
+        print("ON APPEAR")
+        CoreData.stack.context.refreshAllObjects()
+    }
+    
 }

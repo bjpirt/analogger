@@ -29,4 +29,6 @@ struct ListCell: View {
             }
         }
     }
+    
+    
 }
