@@ -18,7 +18,7 @@ struct AnaloggerWidgetControl: ControlWidget {
         ) {
             ControlWidgetButton(action: LogShotIntent()) {
                 Label("Log Shot", systemImage: "camera.aperture")
-              }
+            }
         }
         .displayName("Log Shot")
         .description("Log a shot in Analogger")

@@ -76,6 +76,7 @@ struct FilmRollListCell: View {
     }
 
     func addShotAction(){
+        print("Calling shared logshot from cell")
         actions.logShot(filmRoll: self.filmRoll)
     }
 }
