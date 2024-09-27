@@ -24,7 +24,7 @@ struct CameraListView : View {
                     Section()
                     {
                         
-                        ForEach(self.dataSource.objects) { camera in
+                        ForEach(self.dataSource.objects, id: \.self) { camera in
                         
                                 NavigationLink(destination: CameraEditView(camera: camera))
                             { ListCell(main: camera.make, sub: camera.model) }

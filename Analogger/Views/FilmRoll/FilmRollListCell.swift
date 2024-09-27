@@ -36,7 +36,7 @@ struct FilmRollListCell: View {
                 }
                 if self.filmRoll.camera != nil {
                     HStack {
-                        Text("\((self.filmRoll.camera?.make)!) \((self.filmRoll.camera?.model)!)")
+                        Text("\(self.filmRoll.camera?.make ?? "") \(self.filmRoll.camera?.model ?? "")")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                         Spacer()
@@ -44,7 +44,7 @@ struct FilmRollListCell: View {
                 }
                 if self.filmRoll.lens != nil {
                     HStack {
-                        Text("\((self.filmRoll.lens?.make)!) \((self.filmRoll.lens?.model)!) (\((self.filmRoll.lens?.focalLength)!)mm)")
+                        Text("\(self.filmRoll.lens?.make ?? "") \(self.filmRoll.lens?.model ?? "") (\(self.filmRoll.lens?.focalLength ?? 0)mm)")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                         Spacer()
@@ -52,7 +52,7 @@ struct FilmRollListCell: View {
                 }
                 if self.filmRoll.filmStock != nil {
                     HStack {
-                        Text("\((self.filmRoll.filmStock?.make)!) \((self.filmRoll.filmStock?.type)!)")
+                        Text("\(self.filmRoll.filmStock?.make ?? "") \(self.filmRoll.filmStock?.type ?? "")")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                         Spacer()
