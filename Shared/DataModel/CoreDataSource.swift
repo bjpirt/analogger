@@ -49,6 +49,7 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
         
         let fetchRequest = T.fetchRequest() as! NSFetchRequest<T>
         fetchRequest.fetchBatchSize = 0
+        fetchRequest.shouldRefreshRefetchedObjects = true
 
         if let entity = self.entity {
             fetchRequest.entity = entity
