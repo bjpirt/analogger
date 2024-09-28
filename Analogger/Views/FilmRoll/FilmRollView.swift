@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FilmRollView : View {
     
+    @Environment(\.managedObjectContext) private var viewContext
+
     @State var filmRoll: FilmRoll
 
     @StateObject private var cameraDataSource = CoreDataSource<Camera>()
@@ -74,13 +76,14 @@ struct FilmRollView : View {
 
                 if self.filmRoll.filmShots != nil {
                     Section(header: Text("Shots")){
-                        let shots = self.filmRoll.filmShots?.sortedArray(
-                            using: [NSSortDescriptor(key: "timestamp", ascending: true)]) as? [FilmShot] ?? []
+                        let shots = self.filmRoll.sortedFilmShots
                         ForEach(0..<shots.count, id: \.self) { filmShotIndex in
                             NavigationLink(destination: FilmShotView(filmShot: shots[filmShotIndex])) {
                                 Text("\(filmShotIndex + 1) - \(dateFormatter.string(from: shots[filmShotIndex].timestamp))")
                             }
-                        }
+                        }.onDelete(perform: { offsets in
+                            self.deleteShot(at: offsets)
+                        })
                     }
                 }
                 Section(){
@@ -110,6 +113,17 @@ struct FilmRollView : View {
     func deleteAction() {
         self.filmRoll.delete()
         self.cancelAction()
+    }
+
+    func deleteShot(at offsets: IndexSet) {
+        for offset in offsets {
+            let shotToDelete = self.filmRoll.sortedFilmShots[offset]
+            filmRoll.removeFromFilmShots(shotToDelete)
+            viewContext.delete(shotToDelete)
+        }
+        if viewContext.hasChanges{
+            try? viewContext.save()
+        }
     }
 }
 

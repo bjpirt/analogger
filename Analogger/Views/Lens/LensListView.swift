@@ -10,8 +10,15 @@ import CoreData
 
 struct LensListView : View {
 
-    @StateObject private var dataSource = CoreDataSource<Lens>()
-        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Lens.make, ascending: true),
+            NSSortDescriptor(keyPath: \Lens.model, ascending: true)
+        ],
+        animation: .default)
+    private var lenses: FetchedResults<Lens>
 
     @State private var showingItemAddView: Bool = false
 
@@ -22,11 +29,11 @@ struct LensListView : View {
                 List() {
                     Section()
                     {
-                        ForEach(self.dataSource.objects) { lens in
+                        ForEach(lenses) { lens in
                                 NavigationLink(destination: LensEditView(lens: lens))
                             { ListCell(main: lens.make, sub: "\(lens.model) (\(lens.focalLength)mm)") }
                         }
-                            .onDelete(perform: self.dataSource.delete)
+                            .onDelete(perform: self.delete)
                     }
                 }
                 HiddenNavigationLink(destination: LensAddView(), isActive: self.$showingItemAddView)
@@ -38,5 +45,18 @@ struct LensListView : View {
                 ActivateButton(activates: $showingItemAddView) { Image(systemName: "plus") }
                 } )
          }
+    }
+
+    private func delete(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { lenses[$0] }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
     }
 }

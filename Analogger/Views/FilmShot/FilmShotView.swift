@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FilmShotView : View {
 
+    @Environment(\.managedObjectContext) private var viewContext
+
     @State var filmShot: FilmShot
 
     @StateObject private var cameraDataSource = CoreDataSource<Camera>()
@@ -59,21 +61,10 @@ struct FilmShotView : View {
                     }
                     Picker("Lens", selection: self.$filmShot.lens) {
                         Text("Select lens").tag(Optional<Lens>(nil))
-
                         ForEach(self.lensDataSource.objects) { lens in
                             Text("\(lens.make) \(lens.model)").tag(Optional(lens))
                         }
                     }
-                }
-
-                Section(){
-                    Button(
-                        role: .destructive,
-                        action: { self.deleteAction() },
-                        label: { Text("Delete Film Shot").frame(maxWidth: .infinity) }
-                    )
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
                 }
             }
         }
@@ -87,11 +78,6 @@ struct FilmShotView : View {
 
     func saveAction() {
         self.filmShot.save()
-        self.cancelAction()
-    }
-
-    func deleteAction() {
-        self.filmShot.delete()
         self.cancelAction()
     }
 }

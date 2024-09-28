@@ -10,8 +10,15 @@ import CoreData
 
 struct FilmStockListView : View {
 
-    @StateObject private var dataSource = CoreDataSource<FilmStock>()
-        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "type", ascending: true)])
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \FilmStock.make, ascending: true),
+            NSSortDescriptor(keyPath: \FilmStock.type, ascending: true)
+        ],
+        animation: .default)
+    private var filmStocks: FetchedResults<FilmStock>
 
     @State private var showingItemAddView: Bool = false
 
@@ -23,12 +30,12 @@ struct FilmStockListView : View {
                     Section()
                     {
                         
-                        ForEach(self.dataSource.objects) { filmStock in
+                        ForEach(filmStocks) { filmStock in
                         
                                 NavigationLink(destination: FilmStockEditView(filmStock: filmStock))
                             { ListCell(main: filmStock.make, sub: "\(filmStock.type) (\(filmStock.asa) asa)") }
                         }
-                            .onDelete(perform: self.dataSource.delete)
+                            .onDelete(perform: self.delete)
                     }
                 }
                 HiddenNavigationLink(destination: FilmStockAddView(), isActive: self.$showingItemAddView)
@@ -40,5 +47,18 @@ struct FilmStockListView : View {
                 ActivateButton(activates: $showingItemAddView) { Image(systemName: "plus") }
                 } )
          }
+    }
+
+    private func delete(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { filmStocks[$0] }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
     }
 }

@@ -24,6 +24,11 @@ extension FilmRoll {
     @NSManaged public var lens: Lens?
     @NSManaged public var filmShots: NSSet?
 
+    var sortedFilmShots : [FilmShot] {
+        return filmShots?.sortedArray(
+            using: [NSSortDescriptor(key: "timestamp", ascending: true)]) as? [FilmShot] ?? []
+    }
+
 }
 
 // MARK: Generated accessors for filmShots

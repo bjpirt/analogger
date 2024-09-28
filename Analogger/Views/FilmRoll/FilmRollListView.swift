@@ -10,8 +10,12 @@ import CoreData
 
 struct FilmRollListView : View {
     
-    @StateObject private var dataSource = CoreDataSource<FilmRoll>()
-        .sortKeys(sortKeys: [(key: "created", ascending: false)])
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \FilmRoll.created, ascending: false)],
+        animation: .default)
+    private var filmRolls: FetchedResults<FilmRoll>
     
     @State private var showingItemAddView: Bool = false
     
@@ -24,23 +28,23 @@ struct FilmRollListView : View {
                     Section("Active Rolls")
                     {
                         
-                        ForEach(self.dataSource.objects) { filmRoll in
+                        ForEach(filmRolls) { filmRoll in
                             if !filmRoll.complete {
                                 NavigationLink(destination: FilmRollView(filmRoll: filmRoll))
                                 { FilmRollListCell(filmRoll: filmRoll) }
                             }
                         }
-                            .onDelete(perform: self.dataSource.delete)
+                            .onDelete(perform: self.delete)
                     }
                     Section("Complete Rolls")
                     {
-                        ForEach(self.dataSource.objects) { filmRoll in
+                        ForEach(filmRolls) { filmRoll in
                             if filmRoll.complete {
                                 NavigationLink(destination: FilmRollView(filmRoll: filmRoll))
                                 { FilmRollListCell(filmRoll: filmRoll) }
                             }
                         }
-                            .onDelete(perform: self.dataSource.delete)
+                            .onDelete(perform: self.delete)
                     }
                 }
                 HiddenNavigationLink(destination: FilmRollAddView(), isActive: self.$showingItemAddView)
@@ -63,4 +67,16 @@ struct FilmRollListView : View {
         CoreData.stack.context.refreshAllObjects()
     }
     
+    private func delete(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { filmRolls[$0] }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
 }
