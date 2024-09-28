@@ -17,9 +17,11 @@ class AnaloggerActions {
     private var locationViewModel = LocationViewModel()
     
     public func getActiveFilmRoll () -> FilmRoll? {
-        let filmRollDataSource = CoreDataSource<FilmRoll>().sortKeys(sortKeys: [(key: "created", ascending: false)])
-            .predicates(predicates: [NSPredicate(format: "complete == NO")])
-        let filmRolls = filmRollDataSource.objects
+        let filmRolls = CoreDataSource<FilmRoll>()
+            .sortKeys(sortKeys: [(key: "created", ascending: false)])
+            .predicate(predicate: NSPredicate(format: "complete = 0"))
+            .objects
+        print("Found \(filmRolls.count) active film rolls")
         if filmRolls.count == 1 {
             return filmRolls[0]
         }

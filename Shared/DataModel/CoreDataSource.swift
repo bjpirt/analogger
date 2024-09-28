@@ -14,7 +14,7 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
     
     private var frc: NSFetchedResultsController<T>
     private var _sortKeys: [(key: String, ascending: Bool)] = [("id", true)]
-    private var _predicates: [NSPredicate] = []
+    private var _predicate: NSPredicate? = nil
     
     init(entity: NSEntityDescription? = nil) {
 
@@ -39,9 +39,9 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
         return self
     }
     
-    public func predicates(predicates: [NSPredicate]) -> CoreDataSource {
+    public func predicate(predicate: NSPredicate) -> CoreDataSource {
         
-        self._predicates = predicates
+        self._predicate = predicate
         return self
     }
     
@@ -50,6 +50,11 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
         let fetchRequest = T.fetchRequest() as! NSFetchRequest<T>
         fetchRequest.fetchBatchSize = 0
         fetchRequest.shouldRefreshRefetchedObjects = true
+
+        if self._predicate != nil {
+            print("Predicate exists")
+            fetchRequest.predicate = self._predicate
+        }
 
         if let entity = self.entity {
             fetchRequest.entity = entity
