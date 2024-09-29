@@ -22,6 +22,7 @@ class CoreData: NSObject {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         })
+        container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
     

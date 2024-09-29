@@ -19,8 +19,6 @@ struct FilmRollListView : View {
     
     @State private var showingItemAddView: Bool = false
     
-    @State private var shooting = false
-
     var body: some View {
         NavigationView {
             VStack {

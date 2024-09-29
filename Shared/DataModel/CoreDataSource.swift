@@ -13,7 +13,7 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
     let objectWillChange = PassthroughSubject<Void, Never>()
     
     private var frc: NSFetchedResultsController<T>
-    private var _sortKeys: [(key: String, ascending: Bool)] = [("id", true)]
+    private var _sortKeys: [(key: String, ascending: Bool)] = []
     private var _predicate: NSPredicate? = nil
     
     init(entity: NSEntityDescription? = nil) {
@@ -70,6 +70,7 @@ class CoreDataSource<T: NSManagedObject>: NSObject, ObservableObject, NSFetchedR
     private func configureFetchedResultsController() -> NSFetchedResultsController<T> {
         
         let fetchRequest = self.configureFetchRequest()
+        fetchRequest.shouldRefreshRefetchedObjects = true
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest,
                                              managedObjectContext: CoreData.stack.context,
                                              sectionNameKeyPath: nil,

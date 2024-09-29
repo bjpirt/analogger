@@ -10,6 +10,8 @@ import SwiftUI
 
 @main
 struct AnaloggerApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     let viewContext = CoreData.stack.context
 
     var body: some Scene {

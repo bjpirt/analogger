@@ -56,6 +56,8 @@
 		2FED296E2CA4131A0092FF55 /* Analogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */; };
 		2FED29702CA41BD90092FF55 /* ShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED296F2CA41BD90092FF55 /* ShortcutsProvider.swift */; };
 		2FED29712CA41BD90092FF55 /* ShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED296F2CA41BD90092FF55 /* ShortcutsProvider.swift */; };
+		2FED29E92CA7FEF30092FF55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED29E82CA7FEF30092FF55 /* AppDelegate.swift */; };
+		2FED29EB2CA80A5B0092FF55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED29EA2CA80A540092FF55 /* SceneDelegate.swift */; };
 		2FFCD4692C978BDB00C6C1C3 /* AnaloggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD4682C978BDB00C6C1C3 /* AnaloggerApp.swift */; };
 		2FFCD46B2C978BDB00C6C1C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCD46A2C978BDB00C6C1C3 /* ContentView.swift */; };
 		2FFCD46D2C978BDE00C6C1C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFCD46C2C978BDE00C6C1C3 /* Assets.xcassets */; };
@@ -148,6 +150,8 @@
 		2FED296C2CA3FA4B0092FF55 /* AnaloggerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnaloggerWidgetExtension.entitlements; sourceTree = "<group>"; };
 		2FED296D2CA3FA830092FF55 /* Analogger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Analogger.entitlements; sourceTree = "<group>"; };
 		2FED296F2CA41BD90092FF55 /* ShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsProvider.swift; sourceTree = "<group>"; };
+		2FED29E82CA7FEF30092FF55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FED29EA2CA80A540092FF55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2FFCD4652C978BDB00C6C1C3 /* Analogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Analogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FFCD4682C978BDB00C6C1C3 /* AnaloggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaloggerApp.swift; sourceTree = "<group>"; };
 		2FFCD46A2C978BDB00C6C1C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -333,6 +337,8 @@
 		2FFCD4672C978BDB00C6C1C3 /* Analogger */ = {
 			isa = PBXGroup;
 			children = (
+				2FED29EA2CA80A540092FF55 /* SceneDelegate.swift */,
+				2FED29E82CA7FEF30092FF55 /* AppDelegate.swift */,
 				2FED296D2CA3FA830092FF55 /* Analogger.entitlements */,
 				2FED295B2CA3F5830092FF55 /* Info.plist */,
 				2FFCD4AA2C98532C00C6C1C3 /* Components */,
@@ -618,6 +624,7 @@
 				2F9AB2982C99AAA2009F08A0 /* FilmStockAddView.swift in Sources */,
 				2F572EA52C9969080065D40E /* Camera+CoreDataClass.swift in Sources */,
 				2F9AB2912C99A924009F08A0 /* FilmStock+CoreDataClass.swift in Sources */,
+				2FED29E92CA7FEF30092FF55 /* AppDelegate.swift in Sources */,
 				2F9AB2922C99A924009F08A0 /* FilmStock+CoreDataProperties.swift in Sources */,
 				2F572EA62C9969080065D40E /* Camera+CoreDataProperties.swift in Sources */,
 				2FFCD46B2C978BDB00C6C1C3 /* ContentView.swift in Sources */,
@@ -645,6 +652,7 @@
 				2F61C1CC2C99E74500C6B63A /* FilmRoll+CoreDataProperties.swift in Sources */,
 				2F9AB28C2C99A39D009F08A0 /* LensAddView.swift in Sources */,
 				2F61C1D42C99EA2700C6B63A /* FilmRollView.swift in Sources */,
+				2FED29EB2CA80A5B0092FF55 /* SceneDelegate.swift in Sources */,
 				2F9AB2962C99AA4E009F08A0 /* FilmStockFormView.swift in Sources */,
 				2FFCD4692C978BDB00C6C1C3 /* AnaloggerApp.swift in Sources */,
 				2F903A1E2CA15626000FE747 /* FilmShotView.swift in Sources */,
