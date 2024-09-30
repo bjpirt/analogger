@@ -31,10 +31,20 @@ class AnaloggerActions {
     public func logShot(filmRoll: FilmRoll) {
         print("logShot(filmRoll) called in shared actions")
         let location = locationViewModel.lastSeenLocation
-        filmRoll.addFilmShot(
+        let filmShot = filmRoll.addFilmShot(
             lat: location?.coordinate.latitude as Double?,
             lon: location?.coordinate.longitude as Double?
         )
+        locationViewModel.getCountryAndCity(for: location){ placemark in
+            if placemark != nil {
+                filmShot.country = placemark?.country
+                filmShot.region = placemark?.administrativeArea
+                filmShot.locality = placemark?.locality
+                filmShot.street = placemark?.thoroughfare
+                filmShot.locationName = placemark?.name
+                filmShot.save()
+            }
+        }
         WidgetCenter.shared.reloadTimelines(ofKind: "com.pirt.analogger.AnaloggerWidget")
     }
     

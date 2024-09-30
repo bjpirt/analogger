@@ -40,8 +40,8 @@ public class FilmRoll: NSManagedObject {
         return filmRoll
     }
 
-    public func addFilmShot(lat: Double?, lon: Double?){
-        let _ = FilmShot.createFilmShot(filmRoll: self, camera: self.camera!, lens: self.lens, lat: lat, lon: lon)
+    public func addFilmShot(lat: Double?, lon: Double?) -> FilmShot{
+        return FilmShot.createFilmShot(filmRoll: self, camera: self.camera!, lens: self.lens, lat: lat, lon: lon)
     }
 
     public func delete() {

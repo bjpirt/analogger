@@ -39,11 +39,11 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         lastSeenLocation = locations.first
     }
 
-    func fetchCountryAndCity(for location: CLLocation?) {
+    func getCountryAndCity(for location: CLLocation?, closure: @escaping (CLPlacemark?) -> Void) {
         guard let location = location else { return }
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-            self.currentPlacemark = placemarks?.first
+            closure(placemarks?.first)
         }
     }
 }

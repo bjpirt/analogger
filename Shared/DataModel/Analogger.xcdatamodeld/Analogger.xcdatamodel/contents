@@ -16,8 +16,13 @@
         <relationship name="lens" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lens" inverseName="filmRolls" inverseEntity="Lens"/>
     </entity>
     <entity name="FilmShot" representedClassName="FilmShot" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="locality" optional="YES" attributeType="String"/>
+        <attribute name="locationName" optional="YES" attributeType="String"/>
         <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="region" optional="YES" attributeType="String"/>
+        <attribute name="street" optional="YES" attributeType="String"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="camera" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="filmShots" inverseEntity="Camera"/>
         <relationship name="filmRoll" maxCount="1" deletionRule="Nullify" destinationEntity="FilmRoll" inverseName="filmShots" inverseEntity="FilmRoll"/>

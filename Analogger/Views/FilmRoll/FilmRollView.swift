@@ -79,7 +79,21 @@ struct FilmRollView : View {
                         let shots = self.filmRoll.sortedFilmShots
                         ForEach(0..<shots.count, id: \.self) { filmShotIndex in
                             NavigationLink(destination: FilmShotView(filmShot: shots[filmShotIndex])) {
-                                Text("\(filmShotIndex + 1) - \(dateFormatter.string(from: shots[filmShotIndex].timestamp))")
+                                VStack {
+                                    HStack {
+                                        Text("\(filmShotIndex + 1) - \(dateFormatter.string(from: shots[filmShotIndex].timestamp))")
+                                            .font(.headline)
+                                        Spacer()
+                                    }
+                                    if shots[filmShotIndex].street != nil || shots[filmShotIndex].locality != nil || shots[filmShotIndex].country != nil {
+                                        HStack {
+                                            Text(self.locationString(filmShot: shots[filmShotIndex]))
+                                                .font(.subheadline)
+                                                .foregroundColor(.gray)
+                                            Spacer()
+                                        }
+                                    }
+                                }
                             }
                         }.onDelete(perform: { offsets in
                             self.deleteShot(at: offsets)
@@ -99,6 +113,12 @@ struct FilmRollView : View {
         }
         .navigationBarTitle(Text("Film roll details"), displayMode: .large)
         .onDisappear(perform: {self.saveAction()})
+    }
+
+    private func locationString(filmShot: FilmShot) -> String {
+        let parts = [filmShot.street, filmShot.locality, filmShot.country]
+            .filter { $0 != nil} as! [String]
+        return parts.joined(separator: ", ")
     }
 
     func cancelAction() {

@@ -23,6 +23,11 @@ extension FilmShot {
     @NSManaged public var camera: Camera
     @NSManaged public var lens: Lens?
 
+    @NSManaged public var country: String?
+    @NSManaged public var region: String?
+    @NSManaged public var locality: String?
+    @NSManaged public var street: String?
+    @NSManaged public var locationName: String?
 }
 
 extension FilmShot : Identifiable {
