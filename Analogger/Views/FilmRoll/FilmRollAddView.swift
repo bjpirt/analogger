@@ -15,6 +15,8 @@ struct FilmRollAddView : View {
     @State private var camera: Camera? = nil
     @State private var lens: Lens? = nil
     @State private var filmStock: FilmStock? = nil
+    @State private var cameraAsa: Int16 = 100
+    @State private var useFilmAsa: Bool = true
 
     @StateObject private var cameraDataSource = CoreDataSource<Camera>()
         .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
@@ -65,6 +67,20 @@ struct FilmRollAddView : View {
                         Text("\(filmStock.make) \(filmStock.type)").tag(Optional(filmStock))
                     }
                 }
+
+                VStack {
+                    VStack(alignment: .leading) {
+                        Toggle("Use film ASA", isOn: self.$useFilmAsa)
+                    }
+                    if !self.useFilmAsa {
+                        HStack {
+                            Text("Camera film speed (ASA):").foregroundColor(.gray)
+                            Spacer()
+                        }
+                        TextField("Enter camera film speed", value: self.$cameraAsa, format: .number)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                }
             }
         }
         .navigationBarTitle(Text("Add Film Roll"), displayMode: .large)
@@ -78,7 +94,8 @@ struct FilmRollAddView : View {
     }
     
     func saveAction() {
-        _ = FilmRoll.createFilmRoll(name: self.name, camera: self.camera!, filmStock: self.filmStock!, lens: self.lens)
+        self.cameraAsa = self.useFilmAsa ? self.filmStock!.asa : self.cameraAsa
+        _ = FilmRoll.createFilmRoll(name: self.name, camera: self.camera!, filmStock: self.filmStock!, lens: self.lens, cameraAsa: self.cameraAsa)
         self.cancelAction()
     }
     

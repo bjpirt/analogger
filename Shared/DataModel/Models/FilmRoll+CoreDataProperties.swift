@@ -23,6 +23,7 @@ extension FilmRoll {
     @NSManaged public var filmStock: FilmStock?
     @NSManaged public var lens: Lens?
     @NSManaged public var filmShots: NSSet?
+    @NSManaged public var cameraAsa: Int16
 
     var sortedFilmShots : [FilmShot] {
         return filmShots?.sortedArray(

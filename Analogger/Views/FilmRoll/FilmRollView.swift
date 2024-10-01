@@ -72,6 +72,14 @@ struct FilmRollView : View {
                             Text("\(filmStock.make) \(filmStock.type)").tag(Optional(filmStock))
                         }
                     }
+                    VStack(alignment: .leading) {
+                        Text("Camera film speed (ASA)")
+                            .textCase(.uppercase)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                        TextField("Enter camera film speed", value: self.$filmRoll.cameraAsa, format: .number)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
                 }
 
                 if self.filmRoll.filmShots != nil {

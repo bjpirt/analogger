@@ -28,12 +28,13 @@ public class FilmRoll: NSManagedObject {
         return filmRoll
     }
 
-    class func createFilmRoll(name: String, camera: Camera, filmStock: FilmStock, lens: Lens?) -> FilmRoll {
+    class func createFilmRoll(name: String, camera: Camera, filmStock: FilmStock, lens: Lens?, cameraAsa: Int16) -> FilmRoll {
         let filmRoll = FilmRoll.newFilmRoll()
         filmRoll.name = name
         filmRoll.camera = camera
         filmRoll.lens = lens
         filmRoll.filmStock = filmStock
+        filmRoll.cameraAsa = cameraAsa
 
         CoreData.stack.save()
 
