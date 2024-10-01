@@ -11,18 +11,21 @@
         <attribute name="complete" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="filmRolls" inverseEntity="Camera"/>
+        <relationship name="camera" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="filmRolls" inverseEntity="Camera"/>
         <relationship name="filmShots" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FilmShot" inverseName="filmRoll" inverseEntity="FilmShot"/>
         <relationship name="filmStock" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FilmStock" inverseName="filmRolls" inverseEntity="FilmStock"/>
         <relationship name="lens" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lens" inverseName="filmRolls" inverseEntity="Lens"/>
     </entity>
     <entity name="FilmShot" representedClassName="FilmShot" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="evCompensation" attributeType="String" defaultValueString="None"/>
+        <attribute name="fstop" optional="YES" attributeType="String"/>
         <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="locality" optional="YES" attributeType="String"/>
         <attribute name="locationName" optional="YES" attributeType="String"/>
         <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="region" optional="YES" attributeType="String"/>
+        <attribute name="shutterSpeed" optional="YES" attributeType="String"/>
         <attribute name="street" optional="YES" attributeType="String"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="camera" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="filmShots" inverseEntity="Camera"/>
