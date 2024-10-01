@@ -13,13 +13,6 @@ struct FilmShotView : View {
 
     @State var filmShot: FilmShot
 
-    @StateObject private var cameraDataSource = CoreDataSource<Camera>()
-        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
-    @StateObject private var lensDataSource = CoreDataSource<Lens>()
-        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
-    @StateObject private var filmStockDataSource = CoreDataSource<FilmStock>()
-        .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "type", ascending: true)])
-
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -30,7 +23,7 @@ struct FilmShotView : View {
     var body: some View {
         VStack {
             List {
-                Section(header: Text("Film shot detail")){
+                Section(header: Text("Metadata")){
                     VStack(alignment: .leading) {
                         Text("Created")
                             .textCase(.uppercase)
@@ -52,18 +45,9 @@ struct FilmShotView : View {
                             .foregroundColor(.gray)
                         Text("\(self.filmShot.lon)")
                     }
-                    Picker("Camera", selection: self.$filmShot.camera) {
-                        ForEach(self.cameraDataSource.objects) { camera in
-                            Text("\(camera.make) \(camera.model)").tag(camera)
-                        }
-                    }
-                    Picker("Lens", selection: self.$filmShot.lens) {
-                        Text("Select lens").tag(Optional<Lens>(nil))
-                        ForEach(self.lensDataSource.objects) { lens in
-                            Text("\(lens.make) \(lens.model)").tag(Optional(lens))
-                        }
-                    }
                 }
+                FilmShotFormView(camera: self.$filmShot.camera, lens: self.$filmShot.lens, fstop: self.$filmShot.fstop, shutterSpeed: self.$filmShot.shutterSpeed, evCompensation: self.$filmShot.evCompensation)
+                
             }
         }
         .navigationBarTitle(Text("Film shot details"), displayMode: .large)

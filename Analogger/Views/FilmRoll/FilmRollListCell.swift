@@ -11,6 +11,8 @@ struct FilmRollListCell: View {
     
     var filmRoll: FilmRoll
     
+    @State private var showingSheet = false
+    
     private let actions: AnaloggerActions = .shared
 
     private let dateFormatter: DateFormatter = {
@@ -34,13 +36,11 @@ struct FilmRollListCell: View {
                         .foregroundColor(.gray)
                     Spacer()
                 }
-                if self.filmRoll.camera != nil {
-                    HStack {
-                        Text("\(self.filmRoll.camera?.make ?? "") \(self.filmRoll.camera?.model ?? "")")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                        Spacer()
-                    }
+                HStack {
+                    Text("\(self.filmRoll.camera.make) \(self.filmRoll.camera.model)")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                    Spacer()
                 }
                 if self.filmRoll.lens != nil {
                     HStack {
@@ -65,6 +65,15 @@ struct FilmRollListCell: View {
                             .onTapGesture {
                                 self.addShotAction()
                             }
+                        
+                        Spacer()
+                        
+                        Image(systemName: "camera.badge.ellipsis")
+                            .font(.system(size: 30))
+                            .onTapGesture {
+                                showingSheet.toggle()
+                            }
+                        
                         Spacer()
 
                         Text("\((self.filmRoll.filmShots?.count ?? 0)!) shots")
@@ -72,12 +81,14 @@ struct FilmRollListCell: View {
                     }
                 }
             }
+        }.sheet(isPresented: $showingSheet) {
+            FilmShotAddView(filmRoll: filmRoll, camera: filmRoll.camera)
         }
     }
 
     func addShotAction(){
         print("Calling shared logshot from cell")
-        actions.logShot(filmRoll: self.filmRoll)
+        _ = actions.logShot(filmRoll: self.filmRoll)
     }
 }
 

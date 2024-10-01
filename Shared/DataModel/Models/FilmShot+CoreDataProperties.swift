@@ -28,6 +28,10 @@ extension FilmShot {
     @NSManaged public var locality: String?
     @NSManaged public var street: String?
     @NSManaged public var locationName: String?
+
+    @NSManaged public var fstop: String?
+    @NSManaged public var shutterSpeed: String?
+    @NSManaged public var evCompensation: String
 }
 
 extension FilmShot : Identifiable {

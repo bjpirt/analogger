@@ -28,7 +28,7 @@ class AnaloggerActions {
         return nil
     }
     
-    public func logShot(filmRoll: FilmRoll) {
+    public func logShot(filmRoll: FilmRoll) -> FilmShot {
         print("logShot(filmRoll) called in shared actions")
         let location = locationViewModel.lastSeenLocation
         let filmShot = filmRoll.addFilmShot(
@@ -46,12 +46,13 @@ class AnaloggerActions {
             }
         }
         WidgetCenter.shared.reloadTimelines(ofKind: "com.pirt.analogger.AnaloggerWidget")
+        return filmShot
     }
     
     public func logShot() {
         print("logShot called in shared actions")
         guard let activeFilmRoll = getActiveFilmRoll() else { return }
-        logShot(filmRoll: activeFilmRoll)
+        _ = logShot(filmRoll: activeFilmRoll)
     }
     
 }

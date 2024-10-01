@@ -19,7 +19,7 @@ extension FilmRoll {
     @NSManaged public var complete: Bool
     @NSManaged public var created: Date
     @NSManaged public var name: String
-    @NSManaged public var camera: Camera?
+    @NSManaged public var camera: Camera
     @NSManaged public var filmStock: FilmStock?
     @NSManaged public var lens: Lens?
     @NSManaged public var filmShots: NSSet?
