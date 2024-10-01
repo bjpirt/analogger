@@ -32,6 +32,8 @@ extension FilmShot {
     @NSManaged public var fstop: String?
     @NSManaged public var shutterSpeed: String?
     @NSManaged public var evCompensation: String
+
+    @NSManaged public var skipped: Bool
 }
 
 extension FilmShot : Identifiable {

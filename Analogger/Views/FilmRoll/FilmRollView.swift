@@ -93,13 +93,11 @@ struct FilmRollView : View {
                                             .font(.headline)
                                         Spacer()
                                     }
-                                    if shots[filmShotIndex].street != nil || shots[filmShotIndex].locality != nil || shots[filmShotIndex].country != nil {
-                                        HStack {
-                                            Text(self.locationString(filmShot: shots[filmShotIndex]))
-                                                .font(.subheadline)
-                                                .foregroundColor(.gray)
-                                            Spacer()
-                                        }
+                                    HStack {
+                                        Text(self.locationString(filmShot: shots[filmShotIndex]))
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                        Spacer()
                                     }
                                 }
                             }
@@ -124,6 +122,12 @@ struct FilmRollView : View {
     }
 
     private func locationString(filmShot: FilmShot) -> String {
+        if filmShot.skipped {
+            return "Skipped"
+        }
+        if filmShot.street == nil && filmShot.locality == nil && filmShot.country == nil {
+            return "No location"
+        }
         let parts = [filmShot.street, filmShot.locality, filmShot.country]
             .filter { $0 != nil} as! [String]
         return parts.joined(separator: ", ")

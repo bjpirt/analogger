@@ -45,6 +45,10 @@ public class FilmRoll: NSManagedObject {
         return FilmShot.createFilmShot(filmRoll: self, camera: self.camera, lens: self.lens, lat: lat, lon: lon)
     }
 
+    public func skipFilmShot() -> FilmShot{
+        return FilmShot.createFilmShot(filmRoll: self, camera: self.camera, lens: self.lens, lat: nil, lon: nil, skipped: true)
+    }
+
     public func delete() {
         CoreData.stack.context.delete(self)
     }

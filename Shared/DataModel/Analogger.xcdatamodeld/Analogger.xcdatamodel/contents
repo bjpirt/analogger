@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23H124" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Camera" representedClassName="Camera" syncable="YES">
         <attribute name="make" attributeType="String"/>
         <attribute name="model" attributeType="String"/>
@@ -26,6 +26,7 @@
         <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="region" optional="YES" attributeType="String"/>
         <attribute name="shutterSpeed" optional="YES" attributeType="String"/>
+        <attribute name="skipped" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="street" optional="YES" attributeType="String"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="camera" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="filmShots" inverseEntity="Camera"/>

@@ -15,12 +15,13 @@ public class FilmShot: NSManagedObject {
         return FilmShot(context: CoreData.stack.context)
     }
 
-    class func createFilmShot(filmRoll: FilmRoll, camera: Camera, lens: Lens?, lat: Double?, lon: Double?) -> FilmShot {
+    class func createFilmShot(filmRoll: FilmRoll, camera: Camera, lens: Lens?, lat: Double?, lon: Double?, skipped: Bool = false) -> FilmShot {
         let filmShot = FilmShot.newFilmShot()
         filmShot.timestamp = Date.now
         filmShot.filmRoll = filmRoll
         filmShot.camera = camera
         filmShot.lens = lens
+        filmShot.skipped = skipped
         if lat != nil && lon != nil {
             filmShot.lat = lat!
             filmShot.lon = lon!

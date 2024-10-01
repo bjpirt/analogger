@@ -76,6 +76,14 @@ struct FilmRollListCell: View {
                         
                         Spacer()
 
+                        Image(systemName: "arrow.forward.square")
+                            .font(.system(size: 30))
+                            .onTapGesture {
+                                self.skipShotAction()
+                            }
+
+                        Spacer()
+
                         Text("\((self.filmRoll.filmShots?.count ?? 0)!) shots")
                             .foregroundColor(.black)
                     }
@@ -87,8 +95,11 @@ struct FilmRollListCell: View {
     }
 
     func addShotAction(){
-        print("Calling shared logshot from cell")
         _ = actions.logShot(filmRoll: self.filmRoll)
+    }
+
+    func skipShotAction(){
+        _ = actions.skipShot(filmRoll: self.filmRoll)
     }
 }
 

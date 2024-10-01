@@ -49,6 +49,14 @@ class AnaloggerActions {
         return filmShot
     }
     
+    public func skipShot(filmRoll: FilmRoll) -> FilmShot {
+        print("skipShot(filmRoll) called in shared actions")
+        let filmShot = filmRoll.skipFilmShot()
+
+        WidgetCenter.shared.reloadTimelines(ofKind: "com.pirt.analogger.AnaloggerWidget")
+        return filmShot
+    }
+
     public func logShot() {
         print("logShot called in shared actions")
         guard let activeFilmRoll = getActiveFilmRoll() else { return }
