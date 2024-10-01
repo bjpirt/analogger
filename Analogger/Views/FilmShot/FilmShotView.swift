@@ -20,8 +20,6 @@ struct FilmShotView : View {
     @StateObject private var filmStockDataSource = CoreDataSource<FilmStock>()
         .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "type", ascending: true)])
 
-    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -72,12 +70,7 @@ struct FilmShotView : View {
         .onDisappear(perform: {self.saveAction()})
     }
 
-    func cancelAction() {
-        self.presentationMode.wrappedValue.dismiss()
-    }
-
     func saveAction() {
         self.filmShot.save()
-        self.cancelAction()
     }
 }

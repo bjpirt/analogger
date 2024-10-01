@@ -121,18 +121,13 @@ struct FilmRollView : View {
         return parts.joined(separator: ", ")
     }
 
-    func cancelAction() {
-        self.presentationMode.wrappedValue.dismiss()
-    }
-
     func saveAction() {
         self.filmRoll.save()
-        self.cancelAction()
     }
 
     func deleteAction() {
         self.filmRoll.delete()
-        self.cancelAction()
+        self.presentationMode.wrappedValue.dismiss()
     }
 
     func deleteShot(at offsets: IndexSet) {

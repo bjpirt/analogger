@@ -20,7 +20,7 @@ struct FilmRollListView : View {
     @State private var showingItemAddView: Bool = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 List() {
                     Section("Active Rolls")

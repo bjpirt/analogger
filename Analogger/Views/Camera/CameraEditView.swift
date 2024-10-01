@@ -11,8 +11,6 @@ struct CameraEditView : View {
     
     var camera: Camera
     
-//    @StateObject private var dataSource = CoreDataSource<Attribute>(predicateKey: "camera")
-    
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
 
     @State private var textMake: String = ""
