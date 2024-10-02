@@ -56,21 +56,21 @@ struct FilmRollView : View {
                     Picker("Camera", selection: self.$filmRoll.camera) {
                         Text("Select camera").tag(Optional<Camera>(nil))
 
-                        ForEach(self.cameraDataSource.objects) { camera in
+                        ForEach(self.cameraDataSource.objects, id: \.self) { camera in
                             Text("\(camera.make) \(camera.model)").tag(Optional(camera))
                         }
                     }
                     Picker("Lens", selection: self.$filmRoll.lens) {
                         Text("Select lens").tag(Optional<Lens>(nil))
 
-                        ForEach(self.lensDataSource.objects) { lens in
+                        ForEach(self.lensDataSource.objects, id: \.self) { lens in
                             Text("\(lens.make) \(lens.model)").tag(Optional(lens))
                         }
                     }
                     Picker("Film Stock", selection: self.$filmRoll.filmStock) {
                         Text("Select film stock").tag(Optional<FilmStock>(nil))
 
-                        ForEach(self.filmStockDataSource.objects) { filmStock in
+                        ForEach(self.filmStockDataSource.objects, id: \.self) { filmStock in
                             Text("\(filmStock.make) \(filmStock.type)").tag(Optional(filmStock))
                         }
                     }
