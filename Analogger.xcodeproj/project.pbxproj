@@ -34,6 +34,8 @@
 		2F9AB2982C99AAA2009F08A0 /* FilmStockAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2972C99AAA2009F08A0 /* FilmStockAddView.swift */; };
 		2FD59C452CAC1DD1002966CC /* FilmShotEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD59C442CAC1DD1002966CC /* FilmShotEditView.swift */; };
 		2FD59C472CAC1DE0002966CC /* FilmShotAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD59C462CAC1DE0002966CC /* FilmShotAddView.swift */; };
+		2FD59C612CAD31E0002966CC /* FilmRollDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD59C602CAD31DB002966CC /* FilmRollDTO.swift */; };
+		2FD59C622CAD31E0002966CC /* FilmRollDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD59C602CAD31DB002966CC /* FilmRollDTO.swift */; };
 		2FED29302CA2F67F0092FF55 /* Analogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */; };
 		2FED29392CA31A080092FF55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED29382CA31A070092FF55 /* WidgetKit.framework */; };
 		2FED293B2CA31A080092FF55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED293A2CA31A080092FF55 /* SwiftUI.framework */; };
@@ -143,6 +145,7 @@
 		2F9AB2972C99AAA2009F08A0 /* FilmStockAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmStockAddView.swift; sourceTree = "<group>"; };
 		2FD59C442CAC1DD1002966CC /* FilmShotEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmShotEditView.swift; sourceTree = "<group>"; };
 		2FD59C462CAC1DE0002966CC /* FilmShotAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmShotAddView.swift; sourceTree = "<group>"; };
+		2FD59C602CAD31DB002966CC /* FilmRollDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRollDTO.swift; sourceTree = "<group>"; };
 		2FED292F2CA2F67F0092FF55 /* Analogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Analogger.xcdatamodel; sourceTree = "<group>"; };
 		2FED29362CA31A070092FF55 /* AnaloggerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AnaloggerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FED29382CA31A070092FF55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -418,6 +421,7 @@
 		2FFCD4AD2C98558500C6C1C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2FD59C602CAD31DB002966CC /* FilmRollDTO.swift */,
 				2F61C1C92C99E74500C6B63A /* FilmRoll+CoreDataClass.swift */,
 				2F61C1CA2C99E74500C6B63A /* FilmRoll+CoreDataProperties.swift */,
 				2F61C1DB2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift */,
@@ -606,6 +610,7 @@
 				2FED29632CA3F7340092FF55 /* FilmStock+CoreDataClass.swift in Sources */,
 				2FED29642CA3F7340092FF55 /* FilmStock+CoreDataProperties.swift in Sources */,
 				2FED296E2CA4131A0092FF55 /* Analogger.xcdatamodeld in Sources */,
+				2FD59C622CAD31E0002966CC /* FilmRollDTO.swift in Sources */,
 				2FED29652CA3F7340092FF55 /* Lens+CoreDataClass.swift in Sources */,
 				2FED29662CA3F7340092FF55 /* Lens+CoreDataProperties.swift in Sources */,
 				2FED29672CA3F7340092FF55 /* Camera+CoreDataClass.swift in Sources */,
@@ -630,6 +635,7 @@
 				2F9AB2982C99AAA2009F08A0 /* FilmStockAddView.swift in Sources */,
 				2F572EA52C9969080065D40E /* Camera+CoreDataClass.swift in Sources */,
 				2F9AB2912C99A924009F08A0 /* FilmStock+CoreDataClass.swift in Sources */,
+				2FD59C612CAD31E0002966CC /* FilmRollDTO.swift in Sources */,
 				2FED29E92CA7FEF30092FF55 /* AppDelegate.swift in Sources */,
 				2F9AB2922C99A924009F08A0 /* FilmStock+CoreDataProperties.swift in Sources */,
 				2F572EA62C9969080065D40E /* Camera+CoreDataProperties.swift in Sources */,

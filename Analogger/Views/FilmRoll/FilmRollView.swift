@@ -12,6 +12,8 @@ struct FilmRollView : View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @State var filmRoll: FilmRoll
+    
+//    @State var showingItemShare = false
 
     @StateObject private var cameraDataSource = CoreDataSource<Camera>()
         .sortKeys(sortKeys: [(key: "make", ascending: true), (key: "model", ascending: true)])
@@ -118,6 +120,13 @@ struct FilmRollView : View {
             }
         }
         .navigationBarTitle(Text("Film roll details"), displayMode: .large)
+        .navigationBarItems(trailing:
+            ShareLink(
+                "Export",
+                item: JsonDocument(json: FilmRollDTO.create(from: self.filmRoll).json(), name: self.filmRoll.name),
+                preview: SharePreview("Export \(self.filmRoll.name)")
+            )
+        )
         .onDisappear(perform: {self.saveAction()})
     }
 

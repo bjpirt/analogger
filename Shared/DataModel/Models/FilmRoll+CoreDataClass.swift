@@ -56,4 +56,8 @@ public class FilmRoll: NSManagedObject {
     public func save(){
         CoreData.stack.save()
     }
+    
+//    public func json() -> JsonDocument {
+//        return JsonDocument(json: FilmRollDTO.create(from: self).json())
+//    }
 }
