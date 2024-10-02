@@ -50,13 +50,11 @@ struct FilmRollListCell: View {
                         Spacer()
                     }
                 }
-                if self.filmRoll.filmStock != nil {
-                    HStack {
-                        Text("\(self.filmRoll.filmStock?.make ?? "") \(self.filmRoll.filmStock?.type ?? "")")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                        Spacer()
-                    }
+                HStack {
+                    Text("\(self.filmRoll.filmStock.make) \(self.filmRoll.filmStock.type)")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                    Spacer()
                 }
                 if !self.filmRoll.complete {
                     HStack() {
