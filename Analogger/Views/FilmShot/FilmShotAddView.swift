@@ -37,8 +37,6 @@ struct FilmShotAddView : View {
                         )
                         .buttonStyle(.borderedProminent)
                         .controlSize(.large)
-                    }
-                    Section(){
                         Button(
                             role: .cancel,
                             action: { dismiss() },

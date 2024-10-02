@@ -36,7 +36,7 @@ struct FilmShotFormView : View {
                     Picker("Lens", selection: self.$lens) {
                         Text("Select lens").tag(Optional<Lens>(nil))
                         ForEach(self.lensDataSource.objects, id: \.self) { lens in
-                            Text("\(lens.make) \(lens.model)").tag(Optional(lens))
+                            Text("\(lens.make) \(lens.model) \(lens.focalLength)mm").tag(Optional(lens))
                         }
                     }
                     Picker("F Stop", selection: self.$fstop) {

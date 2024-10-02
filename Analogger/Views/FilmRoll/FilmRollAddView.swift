@@ -54,7 +54,7 @@ struct FilmRollAddView : View {
                     Text("Select lens").tag(Optional<Lens>(nil))
 
                     ForEach(self.lensDataSource.objects) { lens in
-                        Text("\(lens.make) \(lens.model)").tag(Optional(lens))
+                        Text("\(lens.make) \(lens.model) \(lens.focalLength)mm").tag(Optional(lens))
                     }
                 }
 
