@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct FilmRollListCell: View {
-    
+
     var filmRoll: FilmRoll
-    
+
     @State private var showingSheet = false
-    
+
     private let actions: AnaloggerActions = .shared
 
     private let dateFormatter: DateFormatter = {

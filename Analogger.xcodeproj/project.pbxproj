@@ -18,6 +18,9 @@
 		2F61C1DD2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1DB2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift */; };
 		2F61C1DE2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1DC2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift */; };
 		2F61C1EE2C9DCBC900C6B63A /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61C1ED2C9DCBC900C6B63A /* LocationViewModel.swift */; };
+		2F6550132CAE835C004FBDF0 /* AnaloggerWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2F6550062CAE8358004FBDF0 /* AnaloggerWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F6550192CAE838E004FBDF0 /* WatchComms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6550182CAE838E004FBDF0 /* WatchComms.swift */; };
+		2F65501A2CAE838E004FBDF0 /* WatchComms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6550182CAE838E004FBDF0 /* WatchComms.swift */; };
 		2F903A1E2CA15626000FE747 /* FilmShotFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F903A1D2CA15626000FE747 /* FilmShotFormView.swift */; };
 		2F9AB2802C997185009F08A0 /* HiddenNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB27F2C997184009F08A0 /* HiddenNavigationLink.swift */; };
 		2F9AB2822C99A108009F08A0 /* LensListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9AB2812C99A108009F08A0 /* LensListView.swift */; };
@@ -80,6 +83,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2F6550112CAE835C004FBDF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FFCD45D2C978BDB00C6C1C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F6550052CAE8358004FBDF0;
+			remoteInfo = "AnaloggerWatch Watch App";
+		};
 		2FED294A2CA31A0A0092FF55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2FFCD45D2C978BDB00C6C1C3 /* Project object */;
@@ -104,6 +114,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2F6550142CAE835C004FBDF0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2F6550132CAE835C004FBDF0 /* AnaloggerWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FED29512CA31A0A0092FF55 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +150,8 @@
 		2F61C1DB2C9C887B00C6B63A /* FilmShot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmShot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2F61C1DC2C9C887B00C6B63A /* FilmShot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilmShot+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F61C1ED2C9DCBC900C6B63A /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		2F6550062CAE8358004FBDF0 /* AnaloggerWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnaloggerWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6550182CAE838E004FBDF0 /* WatchComms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchComms.swift; sourceTree = "<group>"; };
 		2F903A1D2CA15626000FE747 /* FilmShotFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmShotFormView.swift; sourceTree = "<group>"; };
 		2F9AB27F2C997184009F08A0 /* HiddenNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenNavigationLink.swift; sourceTree = "<group>"; };
 		2F9AB2812C99A108009F08A0 /* LensListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensListView.swift; sourceTree = "<group>"; };
@@ -190,10 +213,18 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		2F6550072CAE8358004FBDF0 /* AnaloggerWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "AnaloggerWatch Watch App"; sourceTree = "<group>"; };
 		2FED293C2CA31A080092FF55 /* AnaloggerWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2FED294D2CA31A0A0092FF55 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = AnaloggerWidget; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2F6550032CAE8358004FBDF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FED29332CA31A070092FF55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,6 +344,7 @@
 			children = (
 				2FED29562CA31D660092FF55 /* AnaloggerActions.swift */,
 				2FFCD4A12C98264500C6C1C3 /* DataModel */,
+				2F6550182CAE838E004FBDF0 /* WatchComms.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -327,6 +359,7 @@
 				2FFCD47D2C978BDF00C6C1C3 /* AnaloggerTests */,
 				2FFCD4872C978BDF00C6C1C3 /* AnaloggerUITests */,
 				2FED293C2CA31A080092FF55 /* AnaloggerWidget */,
+				2F6550072CAE8358004FBDF0 /* AnaloggerWatch Watch App */,
 				2FED29372CA31A070092FF55 /* Frameworks */,
 				2FFCD4662C978BDB00C6C1C3 /* Products */,
 			);
@@ -339,6 +372,7 @@
 				2FFCD47A2C978BDF00C6C1C3 /* AnaloggerTests.xctest */,
 				2FFCD4842C978BDF00C6C1C3 /* AnaloggerUITests.xctest */,
 				2FED29362CA31A070092FF55 /* AnaloggerWidgetExtension.appex */,
+				2F6550062CAE8358004FBDF0 /* AnaloggerWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -440,6 +474,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2F6550052CAE8358004FBDF0 /* AnaloggerWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F6550172CAE835C004FBDF0 /* Build configuration list for PBXNativeTarget "AnaloggerWatch Watch App" */;
+			buildPhases = (
+				2F6550022CAE8358004FBDF0 /* Sources */,
+				2F6550032CAE8358004FBDF0 /* Frameworks */,
+				2F6550042CAE8358004FBDF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2F6550072CAE8358004FBDF0 /* AnaloggerWatch Watch App */,
+			);
+			name = "AnaloggerWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "AnaloggerWatch Watch App";
+			productReference = 2F6550062CAE8358004FBDF0 /* AnaloggerWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2FED29352CA31A070092FF55 /* AnaloggerWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FED294E2CA31A0A0092FF55 /* Build configuration list for PBXNativeTarget "AnaloggerWidgetExtension" */;
@@ -470,11 +526,13 @@
 				2FFCD4622C978BDB00C6C1C3 /* Frameworks */,
 				2FFCD4632C978BDB00C6C1C3 /* Resources */,
 				2FED29512CA31A0A0092FF55 /* Embed Foundation Extensions */,
+				2F6550142CAE835C004FBDF0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2FED294B2CA31A0A0092FF55 /* PBXTargetDependency */,
+				2F6550122CAE835C004FBDF0 /* PBXTargetDependency */,
 			);
 			name = Analogger;
 			productName = Analogger;
@@ -527,6 +585,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					2F6550052CAE8358004FBDF0 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					2FED29352CA31A070092FF55 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -560,11 +621,19 @@
 				2FFCD4792C978BDF00C6C1C3 /* AnaloggerTests */,
 				2FFCD4832C978BDF00C6C1C3 /* AnaloggerUITests */,
 				2FED29352CA31A070092FF55 /* AnaloggerWidgetExtension */,
+				2F6550052CAE8358004FBDF0 /* AnaloggerWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2F6550042CAE8358004FBDF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FED29342CA31A070092FF55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -598,6 +667,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2F6550022CAE8358004FBDF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6550192CAE838E004FBDF0 /* WatchComms.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FED29322CA31A070092FF55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -644,6 +721,7 @@
 				2F9AB28A2C99A367009F08A0 /* LensFormView.swift in Sources */,
 				2F9AB2882C99A247009F08A0 /* Lens+CoreDataProperties.swift in Sources */,
 				2F9AB2822C99A108009F08A0 /* LensListView.swift in Sources */,
+				2F65501A2CAE838E004FBDF0 /* WatchComms.swift in Sources */,
 				2F61C1D22C99E9CC00C6B63A /* FilmRollListCell.swift in Sources */,
 				2FFCD4A32C98265800C6C1C3 /* CoreDataSource.swift in Sources */,
 				2FFCD4A92C982E0F00C6C1C3 /* CoreData.swift in Sources */,
@@ -694,6 +772,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2F6550122CAE835C004FBDF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F6550052CAE8358004FBDF0 /* AnaloggerWatch Watch App */;
+			targetProxy = 2F6550112CAE835C004FBDF0 /* PBXContainerItemProxy */;
+		};
 		2FED294B2CA31A0A0092FF55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2FED29352CA31A070092FF55 /* AnaloggerWidgetExtension */;
@@ -712,6 +795,66 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2F6550152CAE835C004FBDF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AnaloggerWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = R53V265ZRP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AnaloggerWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pirt.analogger.Analogger;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pirt.analogger.Analogger.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		2F6550162CAE835C004FBDF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AnaloggerWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = R53V265ZRP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AnaloggerWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pirt.analogger.Analogger;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pirt.analogger.Analogger.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
 		2FED294F2CA31A0A0092FF55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1028,6 +1171,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2F6550172CAE835C004FBDF0 /* Build configuration list for PBXNativeTarget "AnaloggerWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6550152CAE835C004FBDF0 /* Debug */,
+				2F6550162CAE835C004FBDF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2FED294E2CA31A0A0092FF55 /* Build configuration list for PBXNativeTarget "AnaloggerWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
