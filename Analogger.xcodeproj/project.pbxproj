@@ -39,6 +39,7 @@
 		2FD59C472CAC1DE0002966CC /* FilmShotAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD59C462CAC1DE0002966CC /* FilmShotAddView.swift */; };
 		2FD59C612CAD31E0002966CC /* FilmRollDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD59C602CAD31DB002966CC /* FilmRollDTO.swift */; };
 		2FD59C622CAD31E0002966CC /* FilmRollDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD59C602CAD31DB002966CC /* FilmRollDTO.swift */; };
+		2FDA65422CB3C43200499F99 /* LocationPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 2FDA65412CB3C43200499F99 /* LocationPicker */; };
 		2FED29302CA2F67F0092FF55 /* Analogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */; };
 		2FED29392CA31A080092FF55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED29382CA31A070092FF55 /* WidgetKit.framework */; };
 		2FED293B2CA31A080092FF55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FED293A2CA31A080092FF55 /* SwiftUI.framework */; };
@@ -238,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FDA65422CB3C43200499F99 /* LocationPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +615,9 @@
 				Base,
 			);
 			mainGroup = 2FFCD45C2C978BDB00C6C1C3;
+			packageReferences = (
+				2FDA65402CB3C43200499F99 /* XCRemoteSwiftPackageReference "LocationPickerForSwiftUI" */,
+			);
 			productRefGroup = 2FFCD4662C978BDB00C6C1C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1226,6 +1231,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FDA65402CB3C43200499F99 /* XCRemoteSwiftPackageReference "LocationPickerForSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alessiorubicini/LocationPickerForSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FDA65412CB3C43200499F99 /* LocationPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FDA65402CB3C43200499F99 /* XCRemoteSwiftPackageReference "LocationPickerForSwiftUI" */;
+			productName = LocationPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2FED292E2CA2F67F0092FF55 /* Analogger.xcdatamodeld */ = {

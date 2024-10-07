@@ -7,6 +7,7 @@
 
 import Foundation
 import WidgetKit
+import CoreLocation
 
 @Observable
 class AnaloggerActions {
@@ -35,7 +36,13 @@ class AnaloggerActions {
             lat: location?.coordinate.latitude as Double?,
             lon: location?.coordinate.longitude as Double?
         )
-        locationViewModel.getCountryAndCity(for: location){ placemark in
+        self.updateShotLocationDetails(filmShot: filmShot)
+        WidgetCenter.shared.reloadTimelines(ofKind: "com.pirt.analogger.AnaloggerWidget")
+        return filmShot
+    }
+
+    public func updateShotLocationDetails(filmShot: FilmShot){
+        locationViewModel.getCountryAndCity(for: CLLocation(latitude: filmShot.lat, longitude: filmShot.lon)){ placemark in
             if placemark != nil {
                 filmShot.country = placemark?.country
                 filmShot.region = placemark?.administrativeArea
@@ -45,8 +52,6 @@ class AnaloggerActions {
                 filmShot.save()
             }
         }
-        WidgetCenter.shared.reloadTimelines(ofKind: "com.pirt.analogger.AnaloggerWidget")
-        return filmShot
     }
     
     public func skipShot(filmRoll: FilmRoll) -> FilmShot {
